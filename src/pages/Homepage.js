@@ -67,7 +67,7 @@ function Homepage() {
             </Box>
 
 
-            <Grid container spacing={3}>
+            <Grid container spacing={3} sx={{p: 2}}>
                 {serviceList?.map((service) => (
                     <Grid item key={service.id} xs={12} md={4}>
                         <Card style={cardStyle}>
