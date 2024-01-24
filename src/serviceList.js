@@ -3,7 +3,7 @@ export const serviceList = [
         "id": "service_a",
         "title": "Service A",
         "developer": "Developer A",
-        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "full_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel sem nec leo aliquet commodo ac a felis. Nullam eget elit id dolor facilisis hendrerit. In hac habitasse platea dictumst. " +
             "Sed vel sem nec leo aliquet commodo ac a felis. Nullam eget elit id dolor facilisis hendrerit. In hac habitasse platea dictumst. " +
             "Sed vel sem nec leo aliquet commodo ac a felis. Nullam eget elit id dolor facilisis hendrerit. In hac habitasse platea dictumst. " +

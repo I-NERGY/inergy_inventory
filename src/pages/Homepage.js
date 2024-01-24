@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {
     Grid,
     Card,
@@ -11,7 +11,7 @@ import {
     useTheme,
 } from '@mui/material';
 
-import { serviceList } from '../serviceList';
+import {serviceList} from '../serviceList';
 
 function Homepage() {
     const theme = useTheme();
@@ -54,16 +54,56 @@ function Homepage() {
         width: '50px',
     };
 
+    const bannerStyle = {
+        position: 'relative',
+        width: '100%',
+        height: '400px',
+        color: 'white',
+        backgroundImage: 'url("https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-12/i-nergy_3_0_0.jpg?itok=JZDBUS_x")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        overflow: 'hidden'
+    };
+
+    const overlayStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        zIndex: 1
+    };
+
+    const textStyle = {
+        position: 'relative',
+        zIndex: 2,
+        color: 'white',
+        textShadow: '1px 1px 20px rgba(0, 0, 0, 0.7)',
+        padding: '2rem',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        borderRadius: '4px',
+        display: 'inline-block',
+    };
+
+
     return (
         <>
-            <Box style={containerStyle}>
-                <Typography style={titleStyle} variant="h1">
-                    I-NERGY Service Toolbox
-                </Typography>
-                <Divider style={dividerStyle} />
-                <Typography style={subtitleStyle} variant="subtitle2">
-                    Discover our project's services
-                </Typography>
+            <Box style={bannerStyle}>
+                <div style={overlayStyle}></div>
+                <Box style={textStyle}>
+                    <Typography variant="h2" component="h1" gutterBottom fontWeight={500}>
+                        I-NERGY Service Toolbox
+                    </Typography>
+                    <Typography variant="h4">
+                        Discover our project's services
+                    </Typography>
+                </Box>
             </Box>
 
 
@@ -91,7 +131,7 @@ function Homepage() {
                                 size="medium"
                                 variant="outlined"
                                 color="primary"
-                                sx={{ alignSelf: 'center', my: 2 }} // Center the button within the card
+                                sx={{alignSelf: 'center', my: 2}} // Center the button within the card
                             >
                                 Service page
                             </Button>
