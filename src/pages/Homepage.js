@@ -75,7 +75,7 @@ function Homepage() {
                                 component="img"
                                 alt={service.title}
                                 height="200"
-                                image={service.image}
+                                image={service.image.source}
                             />
                             <CardContent style={cardContentStyle}>
                                 <Typography gutterBottom variant="h5" component="div">

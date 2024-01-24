@@ -14,13 +14,14 @@ export const serviceList = [
             {"name": "Frontend GitHub Repository", "link": "https://github.com/developerA/service_a-frontend"}
         ],
         "aiod_links": [{"name": "AIOD Link", "link": "https://aiodlink.com/service_a"}],
-        "image": {"name": "Service A Image", "source": "https://via.placeholder.com/400x300"},
+        "image": {"name": "Service A Image", "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-12/i-nergy_3_0_0.jpg?itok=JZDBUS_x"},
         "screenshots": [
             {"name": "Image 1", "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-12/i-nergy_3_0_0.jpg?itok=JZDBUS_x"},
             {"name": "Image 2", "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-10/Fig.1.png?itok=C5GPz1n0"},
             {"name": "Image 3", "source": "https://pbs.twimg.com/media/GBYSqazXgAA-pR1.jpg"},
             {"name": "Image 4", "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-07/31_I-NERGY%20blog%20article_FBA_31072023.png?itok=ld__E---"}
-        ]
+        ],
+        "demoVideo": "https://www.youtube.com/watch?v=prrDUJGVt00&t=101s&ab_channel=I-NERGYH2020"
     },
     {
         "id": "service_b",
