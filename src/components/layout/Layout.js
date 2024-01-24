@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import {useTheme} from '@mui/material/styles';
+import {Link, useLocation} from "react-router-dom";
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -9,24 +10,27 @@ import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 
-import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents'
-import FooterContent from "./FooterContent";
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import AppsIcon from '@mui/icons-material/Apps';
+
+import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents';
+import FooterContent from './FooterContent';
+
+import {serviceList} from "../../serviceList";
 
 const drawerWidth = 240;
 
 export default function Layout({children}) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const location = useLocation()
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -70,44 +74,55 @@ export default function Layout({children}) {
                     open={open}
                 >
                     <DrawerHeader>
-                        <img src="/images/i-nergy_logo_trans_back.png" alt="" height={'60px'} style={{objectFit: 'cover'}}/>
+                        <img src="/images/i-nergy_logo_trans_back.png" alt="" height={'60px'}
+                             style={{objectFit: 'cover'}}/>
                         <IconButton onClick={handleDrawerClose}>
                             {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                         </IconButton>
                     </DrawerHeader>
                     <Divider/>
                     <List>
-                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            <ListItem key={text} disablePadding>
+                        {/* Map over serviceList to generate menu items */}
+                        {serviceList.map((service) => (
+                            <ListItem
+                                sx={{
+                                    background: location.pathname === `/service/${service.id}` ? 'linear-gradient(270deg, rgba(151,169,77,1) 55%, rgba(255,255,255,1) 100%)' : '',
+                                    border: location.pathname === `/service/${service.id}` ? '1px solid rgba(151,169,77,1)' : '',
+                                    borderRadius: '10px', margin: 1, width: '95%'
+                                }}
+                                key={service.id}
+                                disablePadding
+                                component={Link}
+                                to={`/service/${service.id}`}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit'
+                                }}
+                            >
                                 <ListItemButton>
                                     <ListItemIcon>
-                                        {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
+                                        <AppsIcon/>
                                     </ListItemIcon>
-                                    <ListItemText primary={text}/>
+                                    <ListItemText primary={
+                                        <Typography fontWeight={500} fontSize={17} align={'left'}
+                                                    color={location.pathname === `/service/${service.id}` ? 'white' : 'normal'}>
+                                            {service.title}
+                                        </Typography>}/>
                                 </ListItemButton>
                             </ListItem>
                         ))}
                     </List>
                     <Divider/>
-                    <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                            <ListItem key={text} disablePadding>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
-                                    </ListItemIcon>
-                                    <ListItemText primary={text}/>
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
-                    </List>
                 </Drawer>
                 <Main open={open}>
                     <DrawerHeader/>
                     {children}
                 </Main>
             </Box>
-            <Footer open={open} sx={{position: 'sticky', mt: 'auto'}}><FooterContent/></Footer>
+
+            <Footer open={open} sx={{position: 'sticky', mt: 'auto'}}>
+                <FooterContent/>
+            </Footer>
         </>
     );
 }
