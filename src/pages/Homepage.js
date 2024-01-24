@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 
 import {serviceList} from '../serviceList';
+import Container from "@mui/material/Container";
 
 function Homepage() {
     const theme = useTheme();
@@ -25,33 +26,6 @@ function Homepage() {
 
     const cardContentStyle = {
         flexGrow: 1,
-    };
-
-    const containerStyle = {
-        textAlign: 'center',
-        marginBottom: '40px',
-        marginTop: '20px',
-    };
-
-    const titleStyle = {
-        fontSize: '2.5rem',
-        fontWeight: 'bold',
-        color: theme.palette.primary.main,
-        marginBottom: '10px',
-    };
-
-    const subtitleStyle = {
-        fontSize: '1.2rem',
-        color: theme.palette.secondary.main,
-        marginBottom: '20px',
-        marginTop: '10px',
-    };
-
-    const dividerStyle = {
-        background: theme.palette.secondary.main,
-        height: '2px',
-        margin: '0 auto',
-        width: '50px',
     };
 
     const bannerStyle = {
@@ -91,7 +65,6 @@ function Homepage() {
         display: 'inline-block',
     };
 
-
     return (
         <>
             <Box style={bannerStyle}>
@@ -106,40 +79,40 @@ function Homepage() {
                 </Box>
             </Box>
 
-
-            <Grid container spacing={3} sx={{p: 2}}>
-                {serviceList?.map((service) => (
-                    <Grid item key={service.id} xs={12} md={4}>
-                        <Card style={cardStyle}>
-                            <CardMedia
-                                component="img"
-                                alt={service.title}
-                                height="200"
-                                image={service.image.source}
-                            />
-                            <CardContent style={cardContentStyle}>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {service.title}
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary">
-                                    {service.short_description}
-                                </Typography>
-                            </CardContent>
-                            <Button
-                                component={Link}
-                                to={`/service/${service.id}`}
-                                size="medium"
-                                variant="outlined"
-                                color="primary"
-                                sx={{alignSelf: 'center', my: 2}} // Center the button within the card
-                            >
-                                Service page
-                            </Button>
-
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
+            <Container maxWidth={'xl'}>
+                <Grid container spacing={3} sx={{p: 2}}>
+                    {serviceList?.map((service) => (
+                        <Grid item key={service.id} xs={12} md={4}>
+                            <Card style={cardStyle}>
+                                <CardMedia
+                                    component="img"
+                                    alt={service.title}
+                                    height="200"
+                                    image={service.image.source}
+                                />
+                                <CardContent style={cardContentStyle}>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {service.title}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary">
+                                        {service.short_description}
+                                    </Typography>
+                                </CardContent>
+                                <Button
+                                    component={Link}
+                                    to={`/service/${service.id}`}
+                                    size="medium"
+                                    variant="outlined"
+                                    color="primary"
+                                    sx={{alignSelf: 'center', my: 2}} // Center the button within the card
+                                >
+                                    Service page
+                                </Button>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
         </>
     );
 }
