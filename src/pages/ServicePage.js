@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useKeycloak} from "@react-keycloak/web";
 
 import {useParams, Link} from "react-router-dom";
 import {serviceList} from "../serviceList";
@@ -14,6 +15,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@mui/material/Button';
 
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -21,27 +23,9 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import Breadcrumb from "../components/layout/Breadcrumb";
-import {Button, useTheme} from "@mui/material";
-
-// Sample image URLs
-const imageUrls = [
-    {
-        "name": "Image 1",
-        "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-12/i-nergy_3_0_0.jpg?itok=JZDBUS_x"
-    },
-    {
-        "name": "Image 2",
-        "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-10/Fig.1.png?itok=C5GPz1n0"
-    },
-    {"name": "Image 3", "source": "https://pbs.twimg.com/media/GBYSqazXgAA-pR1.jpg"},
-    {
-        "name": "Image 4",
-        "source": "https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-07/31_I-NERGY%20blog%20article_FBA_31072023.png?itok=ld__E---"
-    }
-]
 
 const ServicePage = () => {
-    const theme = useTheme();
+    const {keycloak, initialized} = useKeycloak();
     let {serviceId} = useParams()
     const service = serviceList.find(service => service.id === serviceId)
 
@@ -52,8 +36,6 @@ const ServicePage = () => {
         </Typography>];
 
     const [open, setOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState('');
-
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     const handleOpen = (index) => {
@@ -66,11 +48,11 @@ const ServicePage = () => {
     };
 
     const handlePrevImage = () => {
-        setSelectedImageIndex((prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length);
+        setSelectedImageIndex((prevIndex) => (prevIndex - 1 + service.screenshots?.length) % service.screenshots?.length);
     };
 
     const handleNextImage = () => {
-        setSelectedImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+        setSelectedImageIndex((prevIndex) => (prevIndex + 1) % service.screenshots?.length);
     };
 
     return (
@@ -120,15 +102,16 @@ const ServicePage = () => {
                         service.aiod_links.length > 0) && (
                         <Grid container>
                             <Grid item xs={12} md={service.demoVideo ? 6 : 12}>
-                                <Container maxWidth={'xl'} sx={{ height: '100%', overflow: 'auto', backgroundColor: '#f9f9f9' }}>
-                                    <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
+                                <Container maxWidth={'xl'}
+                                           sx={{height: '100%', overflow: 'auto', backgroundColor: '#f9f9f9'}}>
+                                    <Stack direction={'row'} sx={{py: 1}} spacing={2}>
                                         <Typography fontWeight={'bold'} variant={'h6'}>
                                             Useful Links
                                         </Typography>
                                     </Stack>
                                     {service.service_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
-                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
+                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
+                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
                                                 Service
                                             </Typography>
                                             <Box
@@ -137,7 +120,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'} />
+                                                <ChevronRightIcon fontSize={'large'}/>
                                                 {service.service_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -166,8 +149,8 @@ const ServicePage = () => {
                                     )}
 
                                     {service.github_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
-                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
+                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
+                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
                                                 GitHub
                                             </Typography>
                                             <Box
@@ -176,7 +159,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'} />
+                                                <ChevronRightIcon fontSize={'large'}/>
                                                 {service.github_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -205,8 +188,8 @@ const ServicePage = () => {
                                     )}
 
                                     {service.aiod_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
-                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
+                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
+                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
                                                 AIoD
                                             </Typography>
                                             <Box
@@ -215,7 +198,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'} />
+                                                <ChevronRightIcon fontSize={'large'}/>
                                                 {service.aiod_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -256,12 +239,12 @@ const ServicePage = () => {
                                             size="large"
                                             startIcon={<YouTubeIcon/>}
                                             sx={{
-                                                background: '#FF0000', // YouTube red color
-                                                color: '#FFFFFF', // White text color
-                                                transition: 'background 0.3s, color 0.3s', // Add transitions for smooth color change
+                                                background: '#CC0000',
+                                                color: '#FFFFFF',
+                                                transition: 'background 0.3s, color 0.3s',
                                                 '&:hover': {
-                                                    background: '#FF0000', // Change background color on hover
-                                                    color: '#FFFFFF', // Change text color on hover
+                                                    background: '#FFFFFF',
+                                                    color: '#CC0000',
                                                 },
                                             }}
                                         >
@@ -275,112 +258,112 @@ const ServicePage = () => {
 
                 </Paper>
 
-                {service.screenshots?.length > 0 && <>
-                    <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} mt={5}>
+                {service.screenshots?.length > 0 && <Grid sx={{py: 3, background: '#F5F8E9', mt: 2, borderRadius: "5px"}}>
+                    <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} >
                         <Typography fontWeight={'bold'} variant={'h5'}>Screenshots</Typography>
                     </Box>
 
                     <Divider sx={{mt: 1}}/>
-                </>}
 
-                <div>
-                    <Grid container spacing={2} mt={1}>
-                        {service.screenshots?.map((image, index) => (
-                            <Grid item key={index} xs={6} md={4} style={{height: '300px'}}>
+                    <div>
+                        <Grid container spacing={2} mt={1} px={2}>
+                            {service.screenshots?.map((image, index) => (
+                                <Grid item key={index} xs={6} md={3} style={{height: '300px'}}>
+                                    <div
+                                        style={{
+                                            position: 'relative',
+                                            height: '100%',
+                                        }}
+                                    >
+                                        <img
+                                            src={image.source}
+                                            alt={image.name}
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                                cursor: 'pointer',
+                                                transition: 'opacity 0.3s',
+                                                ':hover': {
+                                                    opacity: 0.7,
+                                                },
+                                            }}
+                                            onClick={() => handleOpen(index)}
+                                        />
+                                    </div>
+                                </Grid>
+                            ))}
+                        </Grid>
+
+                        <Dialog open={open} onClose={handleClose} maxWidth={'xl'}>
+                            <DialogTitle>{service.screenshots[selectedImageIndex].name}</DialogTitle>
+                            <DialogContent>
                                 <div
                                     style={{
                                         position: 'relative',
-                                        height: '100%',
+                                        display: 'flex',
+                                        justifyContent: 'center',
                                     }}
                                 >
                                     <img
-                                        src={image.source}
-                                        alt={image.name}
+                                        src={service.screenshots[selectedImageIndex].source}
+                                        alt={`Selected ${selectedImageIndex + 1}`}
+                                        style={{maxWidth: '100%', maxHeight: '100%', margin: '0 auto'}}
+                                    />
+                                    <div
                                         style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover',
+                                            position: 'absolute',
+                                            top: '50%',
+                                            transform: 'translateY(-50%)',
+                                            left: '32px',
                                             cursor: 'pointer',
-                                            transition: 'opacity 0.3s',
-                                            ':hover': {
-                                                opacity: 0.7,
-                                            },
+                                            zIndex: 1,
                                         }}
-                                        onClick={() => handleOpen(index)}
-                                    />
-                                </div>
-                            </Grid>
-                        ))}
-                    </Grid>
-
-                    <Dialog open={open} onClose={handleClose} maxWidth={'xl'}>
-                        <DialogTitle>Image Preview</DialogTitle>
-                        <DialogContent>
-                            <div
-                                style={{
-                                    position: 'relative',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <img
-                                    src={imageUrls[selectedImageIndex].source}
-                                    alt={`Selected ${selectedImageIndex + 1}`}
-                                    style={{maxWidth: '100%', maxHeight: '100%', margin: '0 auto'}}
-                                />
-                                <div
-                                    style={{
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translateY(-50%)',
-                                        left: '32px',
-                                        cursor: 'pointer',
-                                        zIndex: 1,
-                                    }}
-                                    onClick={handlePrevImage}
-                                >
-                                    <ArrowBackIcon
-                                        fontSize="large"
-                                        color="primary"
+                                        onClick={handlePrevImage}
+                                    >
+                                        <ArrowBackIcon
+                                            fontSize="large"
+                                            color="primary"
+                                            style={{
+                                                fontSize: '3rem',
+                                                padding: '12px',
+                                                background: 'rgba(255, 255, 255, 0.7)',
+                                                borderRadius: '50%',
+                                            }}
+                                        />
+                                    </div>
+                                    <div
                                         style={{
-                                            fontSize: '3rem',
-                                            padding: '12px',
-                                            background: 'rgba(255, 255, 255, 0.7)',
-                                            borderRadius: '50%',
+                                            position: 'absolute',
+                                            top: '50%',
+                                            transform: 'translateY(-50%)',
+                                            right: '32px',
+                                            cursor: 'pointer',
+                                            zIndex: 1,
                                         }}
-                                    />
+                                        onClick={handleNextImage}
+                                    >
+                                        <ArrowForwardIcon
+                                            fontSize="large"
+                                            color="primary"
+                                            style={{
+                                                fontSize: '3rem',
+                                                padding: '12px',
+                                                background: 'rgba(255, 255, 255, 0.7)',
+                                                borderRadius: '50%',
+                                            }}
+                                        />
+                                    </div>
                                 </div>
-                                <div
-                                    style={{
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translateY(-50%)',
-                                        right: '32px',
-                                        cursor: 'pointer',
-                                        zIndex: 1,
-                                    }}
-                                    onClick={handleNextImage}
-                                >
-                                    <ArrowForwardIcon
-                                        fontSize="large"
-                                        color="primary"
-                                        style={{
-                                            fontSize: '3rem',
-                                            padding: '12px',
-                                            background: 'rgba(255, 255, 255, 0.7)',
-                                            borderRadius: '50%',
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                        </DialogContent>
-                        <DialogActions>
-                            <Button onClick={handleClose} color="primary">
-                                Close
-                            </Button>
-                        </DialogActions>
-                    </Dialog>
-                </div>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={handleClose} color="primary">
+                                    Close
+                                </Button>
+                            </DialogActions>
+                        </Dialog>
+                    </div>
+                </Grid>}
 
             </Container>
         </>

@@ -7,16 +7,13 @@ import {
     CardMedia,
     Typography,
     Button,
-    Box, Divider,
-    useTheme,
+    Box,
 } from '@mui/material';
 
 import {serviceList} from '../serviceList';
 import Container from "@mui/material/Container";
 
 function Homepage() {
-    const theme = useTheme();
-
     const cardStyle = {
         display: 'flex',
         flexDirection: 'column',
