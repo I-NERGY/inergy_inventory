@@ -99,9 +99,10 @@ function Homepage() {
                                     component={Link}
                                     to={`/service/${service.id}`}
                                     size="medium"
-                                    variant="outlined"
+                                    variant={'contained'}
+                                    // variant="outlined"
                                     color="primary"
-                                    sx={{alignSelf: 'center', my: 2}} // Center the button within the card
+                                    sx={{alignSelf: 'center', my: 2, color: 'white'}} // Center the button within the card
                                 >
                                     Service page
                                 </Button>
