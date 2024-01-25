@@ -77,8 +77,7 @@ const ServicePage = () => {
                                 <Typography variant={'subtitle2'}
                                             sx={{mt: 'auto', pt: 5}}><span
                                     style={{fontWeight: 'bold'}}>Developer</span>: {service.developer}</Typography>
-                                <Typography variant={'subtitle2'}
-                                            sx={{mt: 'auto'}}><span
+                                <Typography variant={'subtitle2'}><span
                                     style={{fontWeight: 'bold'}}>Category</span>: {'Service Category'}</Typography>
                             </Container>
                         </Grid>
