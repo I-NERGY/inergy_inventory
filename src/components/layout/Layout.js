@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTheme} from '@mui/material/styles';
 import {Link, useLocation} from "react-router-dom";
+import {useKeycloak} from "@react-keycloak/web";
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -22,12 +23,15 @@ import AppsIcon from '@mui/icons-material/Apps';
 
 import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents';
 import FooterContent from './FooterContent';
+import MenuButton from "./MenuButton";
 
+import {appbarMenuButtonItems} from "../../appbarMenuButtonItems";
 import {serviceList} from "../../serviceList";
 
 const drawerWidth = 240;
 
 export default function Layout({children}) {
+    const {keycloak, initialized} = useKeycloak();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const location = useLocation()
@@ -39,6 +43,10 @@ export default function Layout({children}) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+
+    const handleSignOut = () => {
+        keycloak.logout()
+    }
 
     return (
         <>
@@ -58,6 +66,14 @@ export default function Layout({children}) {
                         <Typography variant="h6" noWrap component="div" color={'white'}>
                             I-NERGY Service Toolbox
                         </Typography>
+                        {keycloak.authenticated === true && <>
+                            <Typography
+                                sx={{ml: 'auto'}}
+                                style={{
+                                    color: 'white'
+                                }}>Welcome, {keycloak?.tokenParsed?.preferred_username}</Typography>
+                            <MenuButton subLinks={appbarMenuButtonItems} signout={handleSignOut}/>
+                        </>}
                     </Toolbar>
                 </AppBar>
                 <Drawer
