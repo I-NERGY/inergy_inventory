@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {useKeycloak} from "@react-keycloak/web";
 
 import {useParams, Link} from "react-router-dom";
 import {serviceList} from "../serviceList";
@@ -25,7 +24,6 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import Breadcrumb from "../components/layout/Breadcrumb";
 
 const ServicePage = () => {
-    const {keycloak, initialized} = useKeycloak();
     let {serviceId} = useParams()
     const service = serviceList.find(service => service.id === serviceId)
 

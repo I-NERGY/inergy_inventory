@@ -31,7 +31,7 @@ import {serviceList} from "../../serviceList";
 const drawerWidth = 240;
 
 export default function Layout({children}) {
-    const {keycloak, initialized} = useKeycloak();
+    const {keycloak} = useKeycloak();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const location = useLocation()
