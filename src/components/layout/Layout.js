@@ -64,7 +64,7 @@ export default function Layout({children}) {
                             <MenuIcon/>
                         </IconButton>
                         <Typography variant="h6" noWrap component="div" color={'white'}>
-                            I-NERGY Service Toolbox
+                            I-NERGY Services Inventory
                         </Typography>
                         {keycloak.authenticated === true && <>
                             <Typography
