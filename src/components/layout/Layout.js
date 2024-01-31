@@ -10,6 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -63,9 +64,16 @@ export default function Layout({children}) {
                         >
                             <MenuIcon/>
                         </IconButton>
-                        <Typography variant="h6" noWrap component="div" color={'white'}>
-                            I-NERGY Services Inventory
-                        </Typography>
+                        <Stack direction={'row'}>
+                            <img src="/images/aiod.svg" alt="AIoD logo" height={'60px'}
+                                 style={{objectFit: 'cover', marginRight: '10px'}}/>
+                            <img src="/images/i-nergy_logo_trans_back.png" alt="I-NERGY logo" height={'60px'}
+                                 style={{objectFit: 'cover'}}/>
+
+                        </Stack>
+                        {/*<Typography variant="h6" noWrap component="div" color={'white'}>*/}
+                        {/*    I-NERGY Services Inventory*/}
+                        {/*</Typography>*/}
                         {keycloak.authenticated === true && <>
                             <Typography
                                 sx={{ml: 'auto'}}
@@ -90,8 +98,10 @@ export default function Layout({children}) {
                     open={open}
                 >
                     <DrawerHeader>
-                        <img src="/images/i-nergy_logo_trans_back.png" alt="" height={'60px'}
-                             style={{objectFit: 'cover'}}/>
+                        {/*<img src="/images/i-nergy_logo_trans_back.png" alt="" height={'60px'}*/}
+                        {/*     style={{objectFit: 'cover'}}/>*/}
+                        {/*<img src="/images/aiod.svg" alt="" height={'60px'}*/}
+                        {/*     style={{objectFit: 'cover'}}/>*/}
                         <IconButton onClick={handleDrawerClose}>
                             {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                         </IconButton>
