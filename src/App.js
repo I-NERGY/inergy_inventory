@@ -38,6 +38,7 @@ const theme = createTheme({
         fontFamily: [
             'Poppins',
             'Roboto',
+            'Jura'
         ].join(','),
     }
 });
