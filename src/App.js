@@ -6,22 +6,32 @@ import Homepage from "./pages/Homepage";
 import ServicePage from "./pages/ServicePage";
 
 // Set primary color here
-let primary = '#97A94D'
+let primary_inergy = '#97A94D'
 
 // Set secondary color here
-let secondary = '#B2C561'
+let secondary_inergy = '#B2C561'
+
+let primary_blue_aiod = '#0047BB'
+let secondary_blue_aiod = '#41B6E6'
+let primary_yellow_aiod = '#FFED00'
 
 // Dashboard theme setup here
 const theme = createTheme({
     palette: {
         primary: {
-            main: primary
+            main: primary_inergy
         },
         secondary: {
-            main: secondary
+            main: secondary_inergy
         },
         background: {
-            default: `linear-gradient(to right, ${primary}, ${secondary})`
+            default: `linear-gradient(to right, ${primary_inergy}, ${secondary_inergy})`
+        },
+        background_combined: {
+            default: `linear-gradient(to right, ${primary_blue_aiod}, ${primary_inergy})`
+        },
+        background_aiod: {
+            default: `linear-gradient(to right, ${primary_blue_aiod}, ${secondary_blue_aiod})`
         }
     },
     typography: {
