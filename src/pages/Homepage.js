@@ -88,10 +88,10 @@ function Homepage() {
                                     image={service.image.source}
                                 />
                                 <CardContent style={cardContentStyle}>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" fontWeight={'bold'}>
                                         {service.title}
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary">
+                                    <Typography variant="body2" color="textSecondary" fontWeight={500}>
                                         {service.short_description}
                                     </Typography>
                                 </CardContent>
@@ -100,7 +100,6 @@ function Homepage() {
                                     to={`/service/${service.id}`}
                                     size="medium"
                                     variant={'contained'}
-                                    // variant="outlined"
                                     color="primary"
                                     sx={{alignSelf: 'center', my: 2, color: 'white'}} // Center the button within the card
                                 >

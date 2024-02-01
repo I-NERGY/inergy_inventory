@@ -74,7 +74,7 @@ const ServicePage = () => {
                         <Grid item xs={12} md={8} order={{xs: 2, md: 1}}>
                             <Container maxWidth={'xl'}
                                        sx={{p: 3, display: 'flex', flexDirection: 'column', height: '100%'}}>
-                                <Typography>{service.full_description}</Typography>
+                                <Typography fontWeight={500}>{service.full_description}</Typography>
 
                                 <Typography variant={'subtitle2'}
                                             sx={{mt: 'auto', pt: 5}}><span
