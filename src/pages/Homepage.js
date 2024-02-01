@@ -68,7 +68,7 @@ function Homepage() {
                 <div style={overlayStyle}></div>
                 <Box style={textStyle}>
                     <Typography variant="h2" component="h1" gutterBottom fontWeight={500}>
-                        I-NERGY Service Toolbox
+                        I-NERGY Services Inventory
                     </Typography>
                     <Typography variant="h4">
                         Discover our project's services
