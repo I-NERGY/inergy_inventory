@@ -24,6 +24,15 @@ const theme = createTheme({
         secondary: {
             main: secondary_inergy
         },
+        aiod_yellow: {
+            main: primary_yellow_aiod
+        },
+        primary_blue: {
+            main: primary_blue_aiod
+        },
+        secondary_blue: {
+            main: secondary_blue_aiod
+        },
         background: {
             default: `linear-gradient(to right, ${primary_inergy}, ${secondary_inergy})`
         },
@@ -31,7 +40,7 @@ const theme = createTheme({
             default: `linear-gradient(to right, ${primary_blue_aiod}, ${primary_inergy})`
         },
         background_aiod: {
-            default: `linear-gradient(to right, ${primary_blue_aiod}, ${secondary_blue_aiod})`
+            default: `linear-gradient(to right, ${primary_blue_aiod} 75%, ${secondary_blue_aiod}) 100%`
         }
     },
     typography: {
