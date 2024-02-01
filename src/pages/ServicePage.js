@@ -206,6 +206,7 @@ const ServicePage = () => {
                                                         size="small"
                                                         variant="outlined"
                                                         sx={{
+                                                            mx: 1,
                                                             background: '#0047BB',
                                                             color: '#E7DC56',
                                                             borderColor: '#0047BB',
