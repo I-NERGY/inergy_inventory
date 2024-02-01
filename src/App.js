@@ -41,6 +41,9 @@ const theme = createTheme({
         },
         background_aiod: {
             default: `linear-gradient(to right, ${primary_blue_aiod} 75%, ${secondary_blue_aiod}) 100%`
+        },
+        background_breadcrumb: {
+            default: `linear-gradient(to right, rgba(0, 71, 187, 0.5), rgba(151, 169, 77, 0.5))`
         }
     },
     typography: {

@@ -1,3 +1,5 @@
+import {useTheme} from "@mui/material/styles";
+
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -7,17 +9,19 @@ import Paper from "@mui/material/Paper";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 const Breadcrumb = ({breadcrumbs, welcome_msg}) => {
+    const theme = useTheme();
+
     return (
         <Paper style={{display: 'flex'}} sx={{
             px: 2,
             pb: 2,
-            backgroundColor: '#F5F8E9',
+            background: theme.palette.background_breadcrumb.default,
             position: 'sticky'
         }}>
             <Stack spacing={2}>
                 <Container maxWidth={'xl'} sx={{paddingTop: '15px'}}>
                     <Breadcrumbs
-                        separator={<NavigateNextIcon fontSize="small"/>}
+                        separator={<NavigateNextIcon fontSize="small" />}
                         aria-label="breadcrumb"
                     >
                         {breadcrumbs}

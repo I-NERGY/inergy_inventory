@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useTheme} from "@mui/material/styles";
 
 import {useParams, Link} from "react-router-dom";
 import {serviceList} from "../serviceList";
@@ -24,12 +25,13 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import Breadcrumb from "../components/layout/Breadcrumb";
 
 const ServicePage = () => {
+    const theme = useTheme();
     let {serviceId} = useParams()
     const service = serviceList.find(service => service.id === serviceId)
 
     const breadcrumbs = [
         <Link className={'breadcrumbLink'} key="1" to="/">{'Homepage'}</Link>,
-        <Typography key="3" color="secondary" fontWeight={'bold'} fontSize={'20px'}>
+        <Typography key="3" color={theme.palette.primary_blue.main} fontWeight={'bold'} fontSize={'20px'}>
             {service?.title}
         </Typography>];
 
