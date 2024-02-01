@@ -41,12 +41,17 @@ const FooterContent = () => {
                     </Stack>
                 </Grid>
 
-                <Grid item xs={12} md={4} alignItems="center" justifyContent={'center'} justifyItems={'center'}>
-
-
-                </Grid>
-
-                <Grid item xs={12} md={4}>
+                <Grid
+                    item
+                    xs={12}
+                    md={4}
+                    sx={{
+                        justifyItems: 'center',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                    }}
+                >
                     <Typography sx={{color: theme.palette.aiod_yellow.main}} variant={'h6'}>
                         CONTACT I-NERGY
                     </Typography>
@@ -57,8 +62,7 @@ const FooterContent = () => {
                         </a>
                     </Typography>
 
-
-                    <Box sx={{display: 'flex', justifyContent: 'start', my: 3}}>
+                    <Box sx={{display: 'flex', justifyContent: 'center', my: 3}}>
                         <IconButton
                             href="https://twitter.com/inergy_h2020"
                             target="_blank"
@@ -100,7 +104,6 @@ const FooterContent = () => {
                         </IconButton>
                     </Box>
 
-
                     <Typography sx={{color: theme.palette.aiod_yellow.main, mb: 1}} variant={'h6'}>
                         STAY UPDATED
                     </Typography>
@@ -135,20 +138,165 @@ const FooterContent = () => {
                         sx={{
                             borderRadius: '25px',
                             mt: 1,
-
                             border: `1px solid ${theme.palette.aiod_yellow.main}`,
                             '&:hover': {
                                 backgroundColor: theme.palette.aiod_yellow.main,
                                 color: '#0047BB',
+                                '& .MuiSvgIcon-root': {
+                                    transform: 'rotate(-45deg)',
+                                    color: '#0047BB', // Change the endIcon color on hover
+                                },
+                                '& .MuiTypography-root': {
+                                    color: '#0047BB', // Change the text color on hover
+                                },
                             },
                             '& .MuiSvgIcon-root': {
                                 transform: 'rotate(-45deg)',
+                                transition: 'color 0.3s ease-in-out', // Add transition for smooth color change
                             },
                         }}
-                        endIcon={<SendIcon sx={{mb: '2px'}}/>}
+                        endIcon={
+                            <SendIcon
+                                sx={{
+                                    mb: '2px',
+                                    color: theme.palette.aiod_yellow.main,
+                                    '&:hover': {
+                                        color: '#0047BB',
+                                    },
+                                }}
+                            />
+                        }
                     >
-                        <Typography sx={{fontWeight: '700', textTransform: 'none'}}>I-NERGY News</Typography>
+                        <Typography
+                            sx={{
+                                fontWeight: '700',
+                                textTransform: 'none',
+                                color: theme.palette.aiod_yellow.main,
+                                '&:hover': {
+                                    color: '#0047BB',
+                                },
+                            }}
+                        >
+                            I-NERGY News
+                        </Typography>
                     </Button>
+
+                </Grid>
+
+                <Grid
+                    item
+                    xs={12}
+                    md={4}
+                    sx={{
+                        justifyItems: 'center',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                    }}>
+                    <Typography sx={{color: theme.palette.aiod_yellow.main}} variant={'h6'}>
+                        CONTACT AIoD
+                    </Typography>
+                    <Typography>
+                        <span style={{color: 'rgba(227,229,232,.52)', fontWeight: '500'}}>Email </span>
+                        <a style={{color: 'white'}} href="mailto: info@aiod.eu">
+                            info@aiod.eu
+                        </a>
+                    </Typography>
+
+
+                    <Box sx={{display: 'flex', justifyContent: 'center', my: 3}}>
+                        <IconButton
+                            href="https://twitter.com/AIonDemand"
+                            target="_blank"
+                            rel="noopener"
+                            sx={{
+                                color: 'white',
+                                '&:hover': {
+                                    color: theme.palette.aiod_yellow.main,
+                                },
+                            }}
+                        >
+                            <TwitterIcon/>
+                        </IconButton>
+                        <IconButton
+                            href="https://www.linkedin.com/company/aiondemand/"
+                            target="_blank"
+                            rel="noopener"
+                            sx={{
+                                color: 'white',
+                                '&:hover': {
+                                    color: theme.palette.aiod_yellow.main,
+                                },
+                            }}
+                        >
+                            <LinkedInIcon/>
+                        </IconButton>
+                        <IconButton
+                            href="https://www.youtube.com/@AIonDemand"
+                            target="_blank"
+                            rel="noopener"
+                            sx={{
+                                color: 'white',
+                                '&:hover': {
+                                    color: theme.palette.aiod_yellow.main,
+                                },
+                            }}
+                        >
+                            <YouTubeIcon/>
+                        </IconButton>
+                    </Box>
+
+
+                    <Button
+                        component="a"
+                        href="https://aiod.eu/about"
+                        target="_blank"
+                        variant={'outlined'}
+                        sx={{
+                            borderRadius: '25px',
+                            mt: 1,
+                            border: `1px solid ${theme.palette.aiod_yellow.main}`,
+                            '&:hover': {
+                                backgroundColor: theme.palette.aiod_yellow.main,
+                                color: '#0047BB',
+                                '& .MuiSvgIcon-root': {
+                                    color: '#0047BB',
+                                },
+                                '& .MuiTypography-root': {
+                                    color: '#0047BB',
+                                },
+                            },
+                            '& .MuiSvgIcon-root': {
+                                transform: 'rotate(-45deg)',
+                                transition: 'color 0.3s ease-in-out',
+                            },
+                        }}
+                        endIcon={
+                            <SendIcon
+                                sx={{
+                                    mb: '2px',
+                                    color: theme.palette.aiod_yellow.main,
+                                    '&:hover': {
+                                        color: '#0047BB',
+                                    },
+                                }}
+                            />
+                        }
+                    >
+                        <Typography
+                            sx={{
+                                fontWeight: '700',
+                                textTransform: 'none',
+                                color: theme.palette.aiod_yellow.main,
+                                '&:hover': {
+                                    color: '#0047BB',
+                                },
+                            }}
+                        >
+                            About the project
+                        </Typography>
+                    </Button>
+
                 </Grid>
             </Grid>
         </Container>

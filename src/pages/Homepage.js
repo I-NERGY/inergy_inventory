@@ -28,10 +28,10 @@ function Homepage() {
     const bannerStyle = {
         position: 'relative',
         width: '100%',
-        height: '400px',
+        height: '500px',
         color: 'white',
-        backgroundImage: 'url("https://i-nergy.eu/sites/default/files/styles/mt_large/public/2023-12/i-nergy_3_0_0.jpg?itok=JZDBUS_x")',
-        backgroundSize: 'cover',
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/aiod_inergy.jpg)`, // Use process.env.PUBLIC_URL to get the correct path
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
         display: 'flex',
         flexDirection: 'column',
