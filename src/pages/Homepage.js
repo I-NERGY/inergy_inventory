@@ -88,6 +88,7 @@ function Homepage() {
         }
         return acc;
     }, initializedCategories);
+
     return (
         <>
             <Box style={bannerStyle}>
