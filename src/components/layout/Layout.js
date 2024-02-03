@@ -164,7 +164,7 @@ export default function Layout({ children }) {
                     </List>
                     <Divider />
                 </Drawer>
-                <Main open={open}>
+                <Main open={open} sx={{background: "#fefefe"}}>
                     <DrawerHeader />
                     {children}
                 </Main>

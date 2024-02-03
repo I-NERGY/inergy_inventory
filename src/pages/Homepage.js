@@ -1,19 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import {useTheme} from "@mui/material/styles";
+
 import {
-    Grid,
-    Card,
-    CardContent,
-    CardMedia,
-    Typography,
-    Button,
-    Box,
+    Grid, Card, CardContent,
+    CardMedia, Container, Typography,
+    Button, Accordion, AccordionSummary,
+    Box, AccordionDetails
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {serviceList} from '../serviceList';
-import Container from "@mui/material/Container";
 
 function Homepage() {
+    const theme = useTheme();
+
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('xl'));
+
     const cardStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -62,6 +66,28 @@ function Homepage() {
         display: 'inline-block',
     };
 
+    const categoryOrder = ['General', 'I-ENEF', 'I-NET', 'I-DER', 'Technical Enablers'];
+
+    const initializedCategories = categoryOrder.reduce((acc, category) => {
+        acc[category] = [];
+        return acc;
+    }, {});
+
+    // Fill the initializedCategories with services
+    const servicesByCategory = serviceList.reduce((acc, service) => {
+        let foundCategory = false;
+        categoryOrder.forEach((category) => {
+            if (service.category.includes(category)) {
+                acc[category].push(service);
+                foundCategory = true;
+            }
+        });
+        // If a service doesn't match any predefined category, it can optionally be added to 'General'
+        if (!foundCategory && acc['General']) {
+            acc['General'].push(service);
+        }
+        return acc;
+    }, initializedCategories);
     return (
         <>
             <Box style={bannerStyle}>
@@ -76,39 +102,64 @@ function Homepage() {
                 </Box>
             </Box>
 
-            <Container maxWidth={'xl'} sx={{mt: 5}}>
-                <Grid container spacing={3} sx={{p: 2}}>
-                    {serviceList?.map((service) => (
-                        <Grid item key={service.id} xs={12} md={4}>
-                            <Card style={cardStyle}>
-                                <CardMedia
-                                    component="img"
-                                    alt={service.title}
-                                    height="200"
-                                    image={service.image.source}
-                                />
-                                <CardContent style={cardContentStyle}>
-                                    <Typography gutterBottom variant="h5" component="div" fontWeight={'bold'}>
-                                        {service.title}
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" fontWeight={500}>
-                                        {service.short_description}
-                                    </Typography>
-                                </CardContent>
-                                <Button
-                                    component={Link}
-                                    to={`/service/${service.id}`}
-                                    size="medium"
-                                    variant={'contained'}
-                                    color="primary"
-                                    sx={{alignSelf: 'center', my: 2, color: 'white'}} // Center the button within the card
-                                >
-                                    Service page
-                                </Button>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
+            <Container maxWidth={isLargeScreen ? 'xl' : 'lg'} sx={{my: 5}}>
+                {categoryOrder.map((category) => (
+                    <Accordion
+                        key={category}
+                        sx={{
+                            mb: 2,
+                            px: 2,
+                            '&:before': {display: 'none'},
+                            boxShadow: 3,
+                            background: 'linear-gradient(to right, rgba(0, 71, 187, 0.1), rgba(255, 237, 0, 0.1))'
+                        }}
+                    >
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon/>}
+                            sx={{ height: '100px', minHeight: '100px', alignItems: 'center' }}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <Typography variant="h4" className="headingGradient"
+                                        fontWeight={'bold'}>{category}</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Grid container spacing={3} sx={{p: 2}}>
+                                {servicesByCategory[category].map((service) => (
+                                    <Grid item key={service.id} xs={12} md={4}>
+                                        <Card style={cardStyle}>
+                                            <CardMedia
+                                                component="img"
+                                                alt={service.title}
+                                                height="200"
+                                                image={service.image.source}
+                                            />
+                                            <CardContent style={cardContentStyle}>
+                                                <Typography gutterBottom variant="h5" component="div"
+                                                            fontWeight={'bold'}>
+                                                    {service.title}
+                                                </Typography>
+                                                <Typography variant="body2" color="textSecondary" fontWeight={500}>
+                                                    {service.short_description}
+                                                </Typography>
+                                            </CardContent>
+                                            <Button
+                                                component={Link}
+                                                to={`/service/${service.id}`}
+                                                size="medium"
+                                                variant={'contained'}
+                                                color="primary"
+                                                sx={{alignSelf: 'center', my: 2, color: 'white'}}
+                                            >
+                                                Service page
+                                            </Button>
+                                        </Card>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </AccordionDetails>
+                    </Accordion>
+                ))}
             </Container>
         </>
     );

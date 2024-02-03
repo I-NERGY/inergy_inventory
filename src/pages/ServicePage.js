@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useTheme} from "@mui/material/styles";
 
 import {useParams, Link} from "react-router-dom";
@@ -34,6 +34,10 @@ const ServicePage = () => {
         <Typography key="3" color={theme.palette.primary_blue.main} fontWeight={'bold'} fontSize={'20px'}>
             {service?.title}
         </Typography>];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const [open, setOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -80,7 +84,7 @@ const ServicePage = () => {
                                             sx={{mt: 'auto', pt: 5}}><span
                                     style={{fontWeight: 'bold'}}>Developer</span>: {service.developer}</Typography>
                                 <Typography variant={'subtitle2'}><span
-                                    style={{fontWeight: 'bold'}}>Category</span>: {'Service Category'}</Typography>
+                                    style={{fontWeight: 'bold'}}>Category</span>: {service.category}</Typography>
                             </Container>
                         </Grid>
 
@@ -129,14 +133,14 @@ const ServicePage = () => {
                                                         variant="outlined"
                                                         sx={{
                                                             mx: 1,
-                                                            background: '#97A94D', // Custom background color
-                                                            color: '#fff', // Custom text color
-                                                            borderColor: '#97A94D', // Custom border color
-                                                            transition: 'background 0.3s, color 0.3s', // Add transitions for smooth color change
+                                                            background: '#97A94D',
+                                                            color: '#fff',
+                                                            borderColor: '#97A94D',
+                                                            transition: 'background 0.3s, color 0.3s',
                                                             '&:hover': {
-                                                                background: '#B2C561', // Change background color on hover
-                                                                color: '#fff', // Change text color on hover
-                                                                borderColor: '#B2C561', // Change border color on hover
+                                                                background: '#B2C561',
+                                                                color: '#fff',
+                                                                borderColor: '#B2C561',
                                                             },
                                                         }}
                                                     >
@@ -168,14 +172,14 @@ const ServicePage = () => {
                                                         variant="outlined"
                                                         sx={{
                                                             mx: 1,
-                                                            background: '#333333', // GitHub Black as background color
-                                                            color: '#CCCCCC', // Light color as text color
-                                                            borderColor: '#333333', // GitHub Black for border
-                                                            transition: 'background 0.3s, color 0.3s', // Add transitions for smooth color change
+                                                            background: '#333333',
+                                                            color: '#CCCCCC',
+                                                            borderColor: '#333333',
+                                                            transition: 'background 0.3s, color 0.3s',
                                                             '&:hover': {
-                                                                background: '#CCCCCC', // Change background color on hover to light color
-                                                                color: '#333333', // Change text color on hover to GitHub Black
-                                                                borderColor: '#CCCCCC', // Change border color to light color on hover
+                                                                background: '#CCCCCC',
+                                                                color: '#333333',
+                                                                borderColor: '#CCCCCC',
                                                             },
                                                         }}
                                                     >
