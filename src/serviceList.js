@@ -522,10 +522,13 @@ export const serviceList = [
         "aiod_links": [],
         "category": "I-DER",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
+            "name": "COMSrecast Image",
+            "source": "/images/services/service_s15.png"
         },
         "demoVideo": "https://comsensuseu-my.sharepoint.com/personal/blaz_bertalanic_comsensus_eu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fblaz%5Fbertalanic%5Fcomsensus%5Feu%2FDocuments%2FASMterni%5Fdemo%5Fvideo%2Fcomsensus%5Fasmterni%5Fdemo%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
+        "screenshots": [
+            {"name": "Anomaly Monitor", "source": "/images/screenshots/service_s15/Anomaly Monitor.png"}
+        ]
     },
     {
         "id": "service_s16",
@@ -538,9 +541,9 @@ export const serviceList = [
         "aiod_links": [],
         "category": "I-DER",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
-        }
+            "name": "COMSrecast Image",
+            "source": "/images/services/service_s16.png"
+        },
     },
     {
         "id": "service_s17",
@@ -584,7 +587,7 @@ export const serviceList = [
         "id": "service_s18",
         "title": "Model evaluation & serving framework",
         "developer": "ENG",
-        "short_description": "Model evaluation and serving framework",
+        "short_description": "A series of integrated online tools (SaaS) providing instruments to evaluate and serve ML models within I-NERGY ecosystem.",
         "full_description": "Model evaluation and serving framework is an online framework deployed as a services (SaaS BM) to provide expert users with a series of fully integrated tools to evaluate and refine their ML/DL models performance and quality and serve ML models to  develop applications.",
         "service_links": [],
         "github_links": [],
@@ -617,8 +620,8 @@ export const serviceList = [
         ],
         "category": "Technical Enablers",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
+            "name": "TLWizard Image",
+            "source": "/images/services/service_s19.png"
         },
         "demoVideo": "https://comsensuseu-my.sharepoint.com/:v:/g/personal/blaz_bertalanic_comsensus_eu/EbDTXYsKMutEu054hWnVehoBU-8iV65K5wnBN1MBlkP8zQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=7vHA4M",
 
