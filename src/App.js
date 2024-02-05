@@ -37,14 +37,17 @@ const theme = createTheme({
             default: `linear-gradient(to right, ${primary_inergy}, ${secondary_inergy})`
         },
         background_combined: {
-            default: `linear-gradient(to right, ${primary_blue_aiod}, ${primary_inergy})`
+            default: `linear-gradient(to right, ${primary_inergy}, ${primary_blue_aiod})`
         },
         background_aiod: {
             default: `linear-gradient(to right, ${primary_blue_aiod} 75%, ${secondary_blue_aiod}) 100%`
         },
         background_breadcrumb: {
-            default: `linear-gradient(to right, rgba(0, 71, 187, 0.5), rgba(151, 169, 77, 0.5))`
-        }
+            default: `linear-gradient(to right, rgba(151, 169, 77, 0.5), rgba(0, 71, 187, 0.5))`
+        },
+        background_screenshots: {
+            default: `linear-gradient(to right, rgba(151, 169, 77, 0.1), rgba(0, 71, 187, 0.1))`
+        },
     },
     typography: {
         fontFamily: [

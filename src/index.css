@@ -13,10 +13,10 @@ code {
 }
 
 .breadcrumbLink {
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 20px;
-  color: white;
-  font-weight: 500;
+  color: #414A4E;
+  font-weight: 700;
 }
 
 .breadcrumbLink:hover {
@@ -27,5 +27,5 @@ code {
   background: linear-gradient(to right, #0047BB, #FFED00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block; /* Required to apply gradient on text */
+  display: inline-block;
 }

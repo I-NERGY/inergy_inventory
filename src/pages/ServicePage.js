@@ -66,9 +66,9 @@ const ServicePage = () => {
             <Container maxWidth={'xl'} sx={{py: 3}}>
 
                 <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} mt={5}>
-                    <Typography fontWeight={'bold'} variant={'h5'}>{service.title}</Typography>
+                    <Typography fontWeight={900} variant={'h5'}>{service.title}</Typography>
                     <Divider orientation="vertical" flexItem sx={{display: {xs: 'block', md: 'none'}, mx: 2}}/>
-                    <Typography fontWeight={'bold'} variant={'h5'}>{service?.category}</Typography>
+                    <Typography fontWeight={900} variant={'h5'}>{service?.category}</Typography>
                 </Box>
 
                 <Divider sx={{mt: 1}}/>
@@ -108,7 +108,7 @@ const ServicePage = () => {
                                 <Container maxWidth={'xl'}
                                            sx={{height: '100%', overflow: 'auto', backgroundColor: '#f9f9f9'}}>
                                     <Stack direction={'row'} sx={{py: 1}} spacing={2}>
-                                        <Typography fontWeight={'bold'} variant={'h6'}>
+                                        <Typography fontWeight={'bold'} variant={'h6'} sx={{textDecoration: 'underline'}}>
                                             Useful Links
                                         </Typography>
                                     </Stack>
@@ -136,7 +136,7 @@ const ServicePage = () => {
                                                             background: '#97A94D',
                                                             color: '#fff',
                                                             borderColor: '#97A94D',
-                                                            transition: 'background 0.3s, color 0.3s',
+                                                            transition: 'background 0.2s, color 0.2s',
                                                             '&:hover': {
                                                                 background: '#B2C561',
                                                                 color: '#fff',
@@ -144,7 +144,7 @@ const ServicePage = () => {
                                                             },
                                                         }}
                                                     >
-                                                        <Typography variant="body2">{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -175,7 +175,7 @@ const ServicePage = () => {
                                                             background: '#333333',
                                                             color: '#CCCCCC',
                                                             borderColor: '#333333',
-                                                            transition: 'background 0.3s, color 0.3s',
+                                                            transition: 'background 0.2s, color 0.2s',
                                                             '&:hover': {
                                                                 background: '#CCCCCC',
                                                                 color: '#333333',
@@ -183,7 +183,7 @@ const ServicePage = () => {
                                                             },
                                                         }}
                                                     >
-                                                        <Typography variant="body2">{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -214,15 +214,15 @@ const ServicePage = () => {
                                                             background: '#0047BB',
                                                             color: '#E7DC56',
                                                             borderColor: '#0047BB',
-                                                            transition: 'background 0.3s, color 0.3s', // Add transitions for smooth color change
+                                                            transition: 'background 0.2s, color 0.2s',
                                                             '&:hover': {
-                                                                background: '#E7DC56', // Change background color on hover
-                                                                color: '#0047BB', // Change text color on hover
+                                                                background: '#E7DC56',
+                                                                color: '#0047BB',
                                                                 borderColor: '#E7DC56',
                                                             },
                                                         }}
                                                     >
-                                                        <Typography variant="body2">{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -243,6 +243,7 @@ const ServicePage = () => {
                                             size="large"
                                             startIcon={<YouTubeIcon/>}
                                             sx={{
+                                                fontWeight: 'bold',
                                                 background: '#CC0000',
                                                 color: '#FFFFFF',
                                                 transition: 'background 0.3s, color 0.3s',
@@ -262,9 +263,9 @@ const ServicePage = () => {
 
                 </Paper>
 
-                {service.screenshots?.length > 0 && <Grid sx={{py: 3, background: '#F5F8E9', mt: 2, borderRadius: "5px"}}>
+                {service.screenshots?.length > 0 && <Grid sx={{py: 3, background: theme.palette.background_screenshots.default, mt: 2, borderRadius: "5px"}}>
                     <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} >
-                        <Typography fontWeight={'bold'} variant={'h5'}>Screenshots</Typography>
+                        <Typography fontWeight={900} variant={'h5'}>Screenshots</Typography>
                     </Box>
 
                     <Divider sx={{mt: 1}}/>

@@ -112,7 +112,8 @@ function Homepage() {
                             px: 2,
                             '&:before': {display: 'none'},
                             boxShadow: 3,
-                            background: 'linear-gradient(to right, rgba(0, 71, 187, 0.1), rgba(255, 237, 0, 0.1))'
+                            // background: 'linear-gradient(to right, rgba(0, 71, 187, 0.1), rgba(255, 237, 0, 0.1))'
+                            background: 'linear-gradient(to right, rgba(151, 169, 77, 0.3), rgba(0, 71, 187, 0.3))'
                         }}
                     >
                         <AccordionSummary

@@ -25,6 +25,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import HomeIcon from '@mui/icons-material/Home';
+import SegmentIcon from '@mui/icons-material/Segment';
 
 import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents';
 import FooterContent from './FooterContent';
@@ -103,16 +104,16 @@ export default function Layout({children}) {
                         <Stack direction={'row'}>
                             <Link to="/">
                                 <img
-                                    src="/images/aiod.svg"
-                                    alt="AIoD logo"
+                                    src="/images/i-nergy_logo_trans_back.png"
+                                    alt="I-NERGY logo"
                                     height={'60px'}
                                     style={{objectFit: 'cover', marginRight: '10px'}}
                                 />
                             </Link>
                             <Link to="/">
                                 <img
-                                    src="/images/i-nergy_logo_trans_back.png"
-                                    alt="I-NERGY logo"
+                                    src="/images/aiod.svg"
+                                    alt="AIoD logo"
                                     height={'60px'}
                                     style={{objectFit: 'cover'}}
                                 />
@@ -149,120 +150,114 @@ export default function Layout({children}) {
                     </DrawerHeader>
                     <Divider/>
                     <List>
-                        {/* Homepage Link */}
+                        <ListItem
+                            sx={{
+                                background: location.pathname === '/' ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : '',
+                                // border: location.pathname === '/' ? '1px solid rgba(151,169,77,1)' : '',
+                                // borderRadius: '10px',
+                                // margin: 1,
+                                width: '100%',
+                            }}
+                            key={'homepage'}
+                            disablePadding
+                            component={Link}
+                            to={'/'}
+                            style={{
+                                textDecoration: 'none',
+                                color: 'inherit',
+                            }}
+                        >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <HomeIcon sx={{color: location.pathname === '/' ? 'white' : 'normal'}}/>
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={
+                                        <Typography
+                                            fontWeight={800}
+                                            variant={'body1'}
+                                            align={'left'}
+                                            color={location.pathname === '/' ? 'white' : 'normal'}
+                                        >
+                                            Homepage
+                                        </Typography>
+                                    }
+                                />
+                            </ListItemButton>
+                        </ListItem>
 
-
-                        {/* Render categories and services */}
-                        <List>
-                            <ListItem
-                                sx={{
-                                    background: location.pathname === '/' ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : '',
-                                    // border: location.pathname === '/' ? '1px solid rgba(151,169,77,1)' : '',
-                                    // borderRadius: '10px',
-                                    // margin: 1,
-                                    width: '100%',
-                                }}
-                                key={'homepage'}
-                                disablePadding
-                                component={Link}
-                                to={'/'}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
-                            >
-                                <ListItemButton>
+                        {categories.map((category) => (
+                            <div key={category}>
+                                <ListItemButton
+                                    onClick={() => handleCategoryClick(category)}
+                                    sx={{
+                                        background: openCategories[category] ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : 'your-inactive-background-color',
+                                        // border: openCategories[category] ? 'your-active-border' : 'your-inactive-border',
+                                        // borderRadius: '10px',
+                                        // margin: 1,
+                                        width: '100%',
+                                    }}
+                                >
                                     <ListItemIcon>
-                                        <HomeIcon sx={{color: location.pathname === '/' ? 'white' : 'normal'}}/>
+                                        <SegmentIcon sx={{color: openCategories[category] ? 'white' : 'normal'}}/>
                                     </ListItemIcon>
                                     <ListItemText
                                         primary={
                                             <Typography
+                                                color={openCategories[category] ? 'white' : 'normal'}
+                                                variant="body1"
                                                 fontWeight={800}
-                                                variant={'body1'}
-                                                align={'left'}
-                                                color={location.pathname === '/' ? 'white' : 'normal'}
                                             >
-                                                Homepage
+                                                {category}
                                             </Typography>
                                         }
                                     />
+                                    {openCategories[category] ? <ExpandLess sx={{color: 'white'}}/> : <ExpandMore/>}
                                 </ListItemButton>
-                            </ListItem>
-
-                            {categories.map((category) => (
-                                <div key={category}>
-                                    <ListItemButton
-                                        onClick={() => handleCategoryClick(category)}
-                                        sx={{
-                                            background: openCategories[category] ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : 'your-inactive-background-color',
-                                            // border: openCategories[category] ? 'your-active-border' : 'your-inactive-border',
-                                            // borderRadius: '10px',
-                                            // margin: 1,
-                                            width: '100%',
-                                        }}
-                                    >
-                                        <ListItemIcon>
-                                            <MenuIcon sx={{color: openCategories[category] ? 'white' : 'normal'}}/>
-                                        </ListItemIcon>
-                                        <ListItemText
-                                            primary={
-                                                <Typography
-                                                    color={openCategories[category] ? 'white' : 'normal'}
-                                                    variant="body1"
-                                                    fontWeight={800}
+                                <Collapse in={openCategories[category]} timeout="auto" unmountOnExit>
+                                    <List component="div" disablePadding sx={{pl: '6px', py: '5px'}}>
+                                        {serviceList
+                                            .filter((service) => service.category.includes(category))
+                                            .map((service) => (
+                                                <ListItemButton
+                                                    key={service.id}
+                                                    component={Link}
+                                                    to={`/service/${service.id}`}
+                                                    sx={{
+                                                        background: location.pathname === `/service/${service.id}` ? 'linear-gradient(to right, rgba(0, 71, 187, 0.8), rgba(151, 169, 77, 0.8))' : '',
+                                                        // border: location.pathname === `/service/${service.id}` ? '1px solid rgba(151,169,77,1)' : '',
+                                                        borderRadius: '10px',
+                                                        // margin: 1,
+                                                        width: '98%',
+                                                    }}
+                                                    style={{
+                                                        textDecoration: 'none',
+                                                        color: 'inherit',
+                                                    }}
                                                 >
-                                                    {category}
-                                                </Typography>
-                                            }
-                                        />
-                                        {openCategories[category] ? <ExpandLess sx={{color: 'white'}} /> : <ExpandMore />}
-                                    </ListItemButton>
-                                    <Collapse in={openCategories[category]} timeout="auto" unmountOnExit>
-                                        <List component="div" disablePadding sx={{pl: '6px', py: '5px'}}>
-                                            {serviceList
-                                                .filter((service) => service.category.includes(category))
-                                                .map((service) => (
-                                                    <ListItemButton
-                                                        key={service.id}
-                                                        component={Link}
-                                                        to={`/service/${service.id}`}
-                                                        sx={{
-                                                            background: location.pathname === `/service/${service.id}` ? 'linear-gradient(to right, rgba(0, 71, 187, 0.8), rgba(151, 169, 77, 0.8))' : '',
-                                                            border: location.pathname === `/service/${service.id}` ? '1px solid rgba(151,169,77,1)' : '',
-                                                            borderRadius: '10px',
-                                                            // margin: 1,
-                                                            width: '98%',
-                                                        }}
-                                                        style={{
-                                                            textDecoration: 'none',
-                                                            color: 'inherit',
-                                                        }}
-                                                    >
-                                                        <ListItemIcon>
-                                                            <KeyboardArrowRightIcon
-                                                                sx={{ color: location.pathname === `/service/${service.id}` ? 'white' : 'normal' }}
-                                                            />
-                                                        </ListItemIcon>
-                                                        <ListItemText
-                                                            primary={
-                                                                <Typography
-                                                                    fontWeight={600}
-                                                                    fontSize={17}
-                                                                    align={'left'}
-                                                                    color={location.pathname === `/service/${service.id}` ? 'white' : 'normal'}
-                                                                >
-                                                                    {service.title}
-                                                                </Typography>
-                                                            }
+                                                    <ListItemIcon>
+                                                        <KeyboardArrowRightIcon
+                                                            sx={{color: location.pathname === `/service/${service.id}` ? 'white' : 'normal'}}
                                                         />
-                                                    </ListItemButton>
-                                                ))}
-                                        </List>
-                                    </Collapse>
-                                </div>
-                            ))}
-                        </List>
+                                                    </ListItemIcon>
+                                                    <ListItemText
+                                                        primary={
+                                                            <Typography
+                                                                fontWeight={600}
+                                                                fontSize={17}
+                                                                align={'left'}
+                                                                color={location.pathname === `/service/${service.id}` ? 'white' : 'normal'}
+                                                            >
+                                                                {service.title}
+                                                            </Typography>
+                                                        }
+                                                    />
+                                                </ListItemButton>
+                                            ))}
+                                    </List>
+                                </Collapse>
+                            </div>
+                        ))}
                     </List>
                     <Divider/>
                 </Drawer>
