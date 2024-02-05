@@ -514,7 +514,7 @@ export const serviceList = [
     {
         "id": "service_s15",
         "title": "COMSrecast",
-        "developer": "COMS",
+        "developer": "COMSENSUS",
         "short_description": "Activity recognition and forecasting service for real time monitoring consumption monitoring.",
         "full_description": "Activity recognition and forecasting service for real time consumption monitoring. The service visualises the real time consumption data and its forecast. At the same time it tracks historical data and converts it into monthly activity diagrams with average hourly consumptions that can be compared by days, months, and years.",
         "service_links": [],
@@ -533,7 +533,7 @@ export const serviceList = [
     {
         "id": "service_s16",
         "title": "Anomaly detection",
-        "developer": "COMS",
+        "developer": "COMSENSUS",
         "short_description": "Detecting deviations in power consumption.",
         "full_description": "Service detects deviations in power consumption. The algorithm forecasts power consumption based on the historic data and if the real data deviates by more than 25% to the forecast, the measurements are flagged as anomalous.",
         "service_links": [],
