@@ -1,35 +1,63 @@
 export const serviceList = [
-    // No updates
     {
         "id": "service_s1",
-        "title": "Unknown Title",
+        "title": "Visual Analytics",
         "developer": "PARITY",
-        "short_description": "No short description provided.",
-        "full_description": "No full description provided.",
-        "service_links": [],
+        "short_description": "Visual Dashboard for data originating from DT Service.",
+        "full_description": "Present real time data related to electricity demand in buildings and EV charging stations in a user-friendly way. Focus is placed on spatial representation. Demand centres are represented as points on a map and users can access data through cards on the map and demand centre specific dashboards.\n" +
+            "The visual analytics engine has been used in DTs for Electricity Demand centers.",
+        "service_links": [
+            {
+                "name": "Service Page",
+                "link": "http://165.227.169.94/"
+            }
+        ],
         "github_links": [],
-        "aiod_links": [],
+        "aiod_links": [
+            {
+                "name": "AI Asset",
+                "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
+            }
+        ],
         "category": "General",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
-        }
+            "name": "Visual Analytics Image",
+            "source": "/images/services/service_s1.png"
+        },
+        "demoVideo": "",
+        "screenshots": [
+            {"name": "Charging Capacity", "source": "/images/screenshots/service_s1/Charging Capacity.png"},
+            {"name": "Consumption Graph", "source": "/images/screenshots/service_s1/Consumption Graph.png"},
+            {"name": "General Info", "source": "/images/screenshots/service_s1/General Info.png"},
+            {"name": "Temperature", "source": "/images/screenshots/service_s1/Temperature.png"},
+            {"name": "Voltage Measurement Graph", "source": "/images/screenshots/service_s1/Voltage Measurement Graph.png"},
+        ]
     },
-    // No updates
     {
         "id": "service_s2",
-        "title": "Unknown Title",
+        "title": "DT Service",
         "developer": "PARITY",
-        "short_description": "No short description provided.",
-        "full_description": "No full description provided.",
-        "service_links": [],
+        "short_description": "Service to collect data from electricity consumption metering devices via WebSocket Protocol.",
+        "full_description": "The service provides real time data related to electricity consumption centres and specifically EV charging stations via WebSocket connection protocol. The objective of the deployment is to help property owners efficiently manage EV charging stations. The digital service also collects data related to electricity demand assets. Based on this data, the service will integrate variable pricing to incentivize drivers at specific intervals. For example, the cost per charge session will be lower for time intervals with lower expected charging station occupancy.",
+        "service_links": [
+            {"name": "Service Page", "link": "http://165.227.169.94/"}
+        ],
         "github_links": [],
-        "aiod_links": [],
+        "aiod_links": [ {
+            "name": "AI Asset", "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
+        }],
         "category": "I-ENEF",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
-        }
+            "name": "DT Service Image",
+            "source": "/images/services/service_s2.png"
+        },
+        "demoVideo": "",
+        "screenshots": [
+            {"name": "Add Meter", "source": "/images/screenshots/service_s2/add_meter_dt.png"},
+            {"name": "Asset Page summary", "source": "/images/screenshots/service_s2/asset_page_Summary.png"},
+            {"name": "Homepage", "source": "/images/screenshots/service_s2/homepage_dt.png"},
+            {"name": "Station Page", "source": "/images/screenshots/service_s2/station_page_dt.png"},
+        ]
     },
     {
         "id": "service_s3",
@@ -39,8 +67,8 @@ export const serviceList = [
         "full_description": "The service is based on the Energy Performance Certificates XML database from Asturias region (in the North of Spain), and it checks data from different parameters in the XML (either an uploaded file or selecting one from the database) according to different approaches, depending on the type of value. It is available both in English and Spanish.",
         "service_links": [
             {
-                "name": "Link",
-                "link": "coming soon"
+                "name": "Service Page",
+                "link": "https://tools.cartif.es/inergy-epc-checker/#/"
             }
         ],
         "github_links": [],
@@ -52,10 +80,16 @@ export const serviceList = [
         ],
         "category": "I-ENEF",
         "image": {
-            "name": "Service C Image",
-            "source": "https://via.placeholder.com/400x300"
+            "name": "EPCckr Image",
+            "source": "/images/services/service_s3.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service3_CARTIF.mp4?csf=1&web=1&e=RUmf26"
+        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service3_CARTIF.mp4?csf=1&web=1&e=RUmf26",
+        "screenshots": [
+            {"name": "EPCckr - checked EPC", "source": "/images/screenshots/service_s3/EPCckr - checked EPC.png"},
+            {"name": "EPCckr - checked EPC details", "source": "/images/screenshots/service_s3/EPCckr - checked EPC details.png"},
+            {"name": "EPCckr - Login", "source": "/images/screenshots/service_s3/EPCckr - Login.png"},
+            {"name": "EPCckr - selection screen", "source": "/images/screenshots/service_s3/EPCckr - selection screen.png"},
+        ]
     },
     {
         "id": "service_s4",
@@ -226,7 +260,7 @@ export const serviceList = [
         "id": "service_s8",
         "title": "IPMVP",
         "developer": "CARTIF",
-        "short_description": "IPMVP Service",
+        "short_description": "International Performance Measurement and Verification Protocol (IPMVP) Service.",
         "full_description": "The service supports users in the definition of the Measurement and Verification Plan following the instructions provided in the International Performance Measurement and Verification Protocol (IPMVP). It is divided into two parts, one to define the proper Measurement and Verification Plan, and the other one to calculate the energy savings resulting from the refurbishment works or the introduction of Energy Conservation Measures (ECM) in a building.",
         "service_links": [
             {
