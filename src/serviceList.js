@@ -30,7 +30,10 @@ export const serviceList = [
             {"name": "Consumption Graph", "source": "/images/screenshots/service_s1/Consumption Graph.png"},
             {"name": "General Info", "source": "/images/screenshots/service_s1/General Info.png"},
             {"name": "Temperature", "source": "/images/screenshots/service_s1/Temperature.png"},
-            {"name": "Voltage Measurement Graph", "source": "/images/screenshots/service_s1/Voltage Measurement Graph.png"},
+            {
+                "name": "Voltage Measurement Graph",
+                "source": "/images/screenshots/service_s1/Voltage Measurement Graph.png"
+            },
         ]
     },
     {
@@ -43,8 +46,9 @@ export const serviceList = [
             {"name": "Service Page", "link": "http://165.227.169.94/"}
         ],
         "github_links": [],
-        "aiod_links": [ {
-            "name": "AI Asset", "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
+        "aiod_links": [{
+            "name": "AI Asset",
+            "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
         }],
         "category": "I-ENEF",
         "image": {
@@ -86,9 +90,15 @@ export const serviceList = [
         "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service3_CARTIF.mp4?csf=1&web=1&e=RUmf26",
         "screenshots": [
             {"name": "EPCckr - checked EPC", "source": "/images/screenshots/service_s3/EPCckr - checked EPC.png"},
-            {"name": "EPCckr - checked EPC details", "source": "/images/screenshots/service_s3/EPCckr - checked EPC details.png"},
+            {
+                "name": "EPCckr - checked EPC details",
+                "source": "/images/screenshots/service_s3/EPCckr - checked EPC details.png"
+            },
             {"name": "EPCckr - Login", "source": "/images/screenshots/service_s3/EPCckr - Login.png"},
-            {"name": "EPCckr - selection screen", "source": "/images/screenshots/service_s3/EPCckr - selection screen.png"},
+            {
+                "name": "EPCckr - selection screen",
+                "source": "/images/screenshots/service_s3/EPCckr - selection screen.png"
+            },
         ]
     },
     {
@@ -410,7 +420,12 @@ export const serviceList = [
         "developer": "CARTIF",
         "short_description": "I-NERGY Heat and Cold Forecasting",
         "full_description": "This is a forecasting service, based on a Random Forest model, for predicting thermal load (heat and cold energy demand) of a Spanish Hospital in hourly basis. The data was provided by VEOLIA, from a hospital complex in C\u00f3rdoba (Spain). The hospital complex has a district heating network. The layout of this district heating network is a ring system composed by two independent pipelines for heating and cooling. This ring provides energy for heating, cooling  and Domestic Hot Water (DHW). Apart from being a district heating network, this system is complex due to the different production sources used for heating and cooling. In this facility heat, cold and steam are produced by using different sources.",
-        "service_links": [],
+        "service_links": [
+            {
+                "name": "Service Page",
+                "link": "https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template, https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template"
+            }
+        ],
         "github_links": [],
         "aiod_links": [
             {
@@ -440,7 +455,12 @@ export const serviceList = [
         "developer": "CARTIF",
         "short_description": "I-NERGY Heat and Cold Decision.",
         "full_description": "This is a forecasting service, based on a decision support system (DSS), for predicting thermal load (heat and cold energy demand) of a Spanish Hospital in hourly basis. The data was provided by VEOLIA, from a hospital complex in C\u00f3rdoba (Spain). The hospital complex has a district heating network. The layout of this district heating network is a ring system composed by two independent pipelines for heating and cooling. This ring provides energy for heating, cooling and Domestic Hot Water (DHW). Apart from being a district heating network, this system is complex due to the different production sources used for heating and cooling. In this facility heat, cold and steam are produced by using different sources.",
-        "service_links": [],
+        "service_links": [
+            {
+                "name": "Service Page",
+                "link": "https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=169c308d-3451-4bb9-9fe1-84316863c18b&revisionId=256efc36-cedd-4f61-90e4-263d9af04d36&parentUrl=marketplace#md-model-detail-template, https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=d30263f9-9902-407d-b0c8-f389b541e98d&revisionId=00ba7987-227b-4f64-a3d2-7d056007b6db&parentUrl=marketplace#md-model-detail-template"
+            }
+        ],
         "github_links": [],
         "aiod_links": [
             {
