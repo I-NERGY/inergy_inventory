@@ -24,7 +24,7 @@ code {
 }
 
 .headingGradient {
-  background: linear-gradient(to right, #0047BB, #FFED00);
+  background: linear-gradient(to right, #0047BB, #97A94D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
