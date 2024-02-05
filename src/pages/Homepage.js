@@ -103,7 +103,7 @@ function Homepage() {
                 </Box>
             </Box>
 
-            <Container maxWidth={isLargeScreen ? 'xl' : 'lg'} sx={{my: 5}}>
+            <Container maxWidth={!isLargeScreen ? 'xl' : 'lg'} sx={{my: 5}}>
                 {categoryOrder.map((category) => (
                     <Accordion
                         key={category}

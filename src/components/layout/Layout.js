@@ -23,7 +23,8 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import AppsIcon from '@mui/icons-material/Apps';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import HomeIcon from '@mui/icons-material/Home';
 
 import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents';
 import FooterContent from './FooterContent';
@@ -149,54 +150,56 @@ export default function Layout({children}) {
                     <Divider/>
                     <List>
                         {/* Homepage Link */}
-                        <ListItem
-                            sx={{
-                                background: location.pathname === '/' ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : '',
-                                border: location.pathname === '/' ? '1px solid rgba(151,169,77,1)' : '',
-                                borderRadius: '10px',
-                                margin: 1,
-                                width: '95%',
-                            }}
-                            key={'homepage'}
-                            disablePadding
-                            component={Link}
-                            to={'/'}
-                            style={{
-                                textDecoration: 'none',
-                                color: 'inherit',
-                            }}
-                        >
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <AppsIcon sx={{color: location.pathname === '/' ? 'white' : 'normal'}}/>
-                                </ListItemIcon>
-                                <ListItemText
-                                    primary={
-                                        <Typography
-                                            fontWeight={500}
-                                            variant={'h6'}
-                                            align={'left'}
-                                            color={location.pathname === '/' ? 'white' : 'normal'}
-                                        >
-                                            Homepage
-                                        </Typography>
-                                    }
-                                />
-                            </ListItemButton>
-                        </ListItem>
+
 
                         {/* Render categories and services */}
                         <List>
+                            <ListItem
+                                sx={{
+                                    background: location.pathname === '/' ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : '',
+                                    // border: location.pathname === '/' ? '1px solid rgba(151,169,77,1)' : '',
+                                    // borderRadius: '10px',
+                                    // margin: 1,
+                                    width: '100%',
+                                }}
+                                key={'homepage'}
+                                disablePadding
+                                component={Link}
+                                to={'/'}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        <HomeIcon sx={{color: location.pathname === '/' ? 'white' : 'normal'}}/>
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        primary={
+                                            <Typography
+                                                fontWeight={800}
+                                                variant={'body1'}
+                                                align={'left'}
+                                                color={location.pathname === '/' ? 'white' : 'normal'}
+                                            >
+                                                Homepage
+                                            </Typography>
+                                        }
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+
                             {categories.map((category) => (
                                 <div key={category}>
                                     <ListItemButton
                                         onClick={() => handleCategoryClick(category)}
                                         sx={{
                                             background: openCategories[category] ? 'linear-gradient(to right, rgba(0, 71, 187), rgba(151, 169, 77))' : 'your-inactive-background-color',
-                                            border: openCategories[category] ? 'your-active-border' : 'your-inactive-border',
-                                            borderRadius: '10px',
-                                            margin: 1,
-                                            width: '95%',
+                                            // border: openCategories[category] ? 'your-active-border' : 'your-inactive-border',
+                                            // borderRadius: '10px',
+                                            // margin: 1,
+                                            width: '100%',
                                         }}
                                     >
                                         <ListItemIcon>
@@ -206,8 +209,8 @@ export default function Layout({children}) {
                                             primary={
                                                 <Typography
                                                     color={openCategories[category] ? 'white' : 'normal'}
-                                                    variant="h6"
-                                                    fontWeight={600}
+                                                    variant="body1"
+                                                    fontWeight={800}
                                                 >
                                                     {category}
                                                 </Typography>
@@ -216,7 +219,7 @@ export default function Layout({children}) {
                                         {openCategories[category] ? <ExpandLess sx={{color: 'white'}} /> : <ExpandMore />}
                                     </ListItemButton>
                                     <Collapse in={openCategories[category]} timeout="auto" unmountOnExit>
-                                        <List component="div" disablePadding>
+                                        <List component="div" disablePadding sx={{pl: '6px', py: '5px'}}>
                                             {serviceList
                                                 .filter((service) => service.category.includes(category))
                                                 .map((service) => (
@@ -228,8 +231,8 @@ export default function Layout({children}) {
                                                             background: location.pathname === `/service/${service.id}` ? 'linear-gradient(to right, rgba(0, 71, 187, 0.8), rgba(151, 169, 77, 0.8))' : '',
                                                             border: location.pathname === `/service/${service.id}` ? '1px solid rgba(151,169,77,1)' : '',
                                                             borderRadius: '10px',
-                                                            margin: 1,
-                                                            width: '95%',
+                                                            // margin: 1,
+                                                            width: '98%',
                                                         }}
                                                         style={{
                                                             textDecoration: 'none',
@@ -237,14 +240,14 @@ export default function Layout({children}) {
                                                         }}
                                                     >
                                                         <ListItemIcon>
-                                                            <AppsIcon
+                                                            <KeyboardArrowRightIcon
                                                                 sx={{ color: location.pathname === `/service/${service.id}` ? 'white' : 'normal' }}
                                                             />
                                                         </ListItemIcon>
                                                         <ListItemText
                                                             primary={
                                                                 <Typography
-                                                                    fontWeight={500}
+                                                                    fontWeight={600}
                                                                     fontSize={17}
                                                                     align={'left'}
                                                                     color={location.pathname === `/service/${service.id}` ? 'white' : 'normal'}
