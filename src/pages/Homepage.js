@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {useTheme} from "@mui/material/styles";
@@ -65,6 +65,10 @@ function Homepage() {
         borderRadius: '4px',
         display: 'inline-block',
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const categoryOrder = ['General', 'I-ENEF', 'I-NET', 'I-DER', 'Technical Enablers'];
 
