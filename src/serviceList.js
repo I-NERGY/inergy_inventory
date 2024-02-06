@@ -310,7 +310,9 @@ export const serviceList = [
         "developer": "ICCS",
         "short_description": "The machine learning-based application for flexibility forecasting and demand response.",
         "full_description": "FlexDR was designed and developed by ICCS for ASM, which is a municipal enterprise that owns and manages the electricity distribution network in the town of Terni in central Italy. The data comes from 54 smart meters that ASM decided to group into a virtual power plant (VPP) in order to explore the potential of the network's loads for demand response, hence acting as an aggregator. To this end, Flex-DR combines data-driven approaches involving k-means clustering and forecasting based on deep learning to forecast the day-ahead flexibility of prosumers. Subsequently it allows to assess their capacity for demand response, and recommends them actions that are of interest both for them and the aggregator.",
-        "service_links": [],
+        "service_links": [
+            {"name": "Service Page", "link": "http://inergy.epu.ntua.gr:3001/"}
+        ],
         "github_links": [
             {
                 "name": "Code repository",
@@ -356,7 +358,9 @@ export const serviceList = [
         "developer": "ICCS",
         "short_description": "Codeless machine learning operations for time series forecasting.",
         "full_description": "DeepTSF automates key aspects of the ML lifecycle, making it an ideal tool for data scientists and MLops engineers engaged in machine learning (ML) and deep learning (DL)-based forecasting. DeepTSF empowers users with a robust and user-friendly solution, while it is designed to seamlessly integrate with existing data analysis workflows, providing enhanced productivity and compatibility. The framework offers a front-end user interface (UI) suitable for data scientists, as well as other higher-level stakeholders, enabling comprehensive understanding through insightful visualizations and evaluation metrics. DeepTSF also prioritizes security through identity management and access authorization mechanisms. The application of DeepTSF in real-life use cases of the I-NERGY project has already proven DeepTSF\u2019s efficacy in DL-based load forecasting, showcasing its significant added value in the electrical power and energy systems domain.",
-        "service_links": [],
+        "service_links": [
+            {"name": "Service Page", "link": "http://131.154.97.48:3000/"}
+        ],
         "github_links": [
             {
                 "name": "Code Repository",
@@ -572,8 +576,13 @@ export const serviceList = [
         "developer": "ICCS",
         "short_description": "Artificial Intelligence for energy efficiency investments decision support.",
         "full_description": "The energy efficiency investments de-risking service has been developed by ICCS, in the context of I-NERGY Horizon 2020 project and specifically for the Riga Energy Agency pilot from Latvia. The purpose of this service is to guide Latvian citizens in creating virtual energy performance certificates for their residential buildings and subsequently explore the costs and benefits that occur by various energy efficiency renovation actions of their preference.",
-        "service_links": [],
-        "github_links": [],
+        "service_links": [
+            {"name": "Service Page", "link": "http://inergy.epu.ntua.gr:3001"}
+        ],
+        "github_links": [
+            {"name": "Front-End", "link": "Front-end: https://github.com/I-NERGY/EEI_Service_frontend"},
+            {"name": "Back-End", "link": "https://github.com/I-NERGY/EEIService"},
+        ],
         "aiod_links": [
             {
                 "name": "AI Asset",
@@ -646,5 +655,23 @@ export const serviceList = [
         },
         "demoVideo": "https://comsensuseu-my.sharepoint.com/:v:/g/personal/blaz_bertalanic_comsensus_eu/EbDTXYsKMutEu054hWnVehoBU-8iV65K5wnBN1MBlkP8zQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=7vHA4M",
 
+    },
+    {
+        "id": "ml_flow",
+        "title": "MLFlow",
+        "developer": "ENG/ICCS",
+        "short_description": "Trained Models Store (MLFlow).",
+        "full_description": "The I-NERGY MLOps platform used for ML experiment logging (including model parameters and evaluation metrics) and model/artifact storage.",
+        "service_links": [
+            {"name": "Service Page", "link": "https://131.154.97.48:8440/"}
+        ],
+        "github_links": [
+            {"name": "Simple", "link": "https://github.com/I-NERGY/mlflow-tracking-server"},
+            {"name": "Secure", "link": "https://github.com/I-NERGY/mlflow-tracking-server-nginx"},
+        ],
+        "aiod_links": [],
+        "category": "Technical Enablers",
+        "image": {"name": "MLFlow image", "source": "/images/services/mlflow.png"}
     }
+
 ]
