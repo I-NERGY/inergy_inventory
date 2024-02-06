@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
-import {useTheme} from "@mui/material/styles";
+import React, { useState, useEffect } from 'react';
+import { useTheme } from "@mui/material/styles";
 
-import {useParams, Link} from "react-router-dom";
-import {serviceList} from "../serviceList";
+import { useParams, Link } from "react-router-dom";
+import { serviceList } from "../serviceList";
 
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
@@ -26,7 +26,7 @@ import Breadcrumb from "../components/layout/Breadcrumb";
 
 const ServicePage = () => {
     const theme = useTheme();
-    let {serviceId} = useParams()
+    let { serviceId } = useParams()
     const service = serviceList.find(service => service.id === serviceId)
 
     const breadcrumbs = [
@@ -61,44 +61,44 @@ const ServicePage = () => {
 
     return (
         <>
-            <Breadcrumb breadcrumbs={breadcrumbs} welcome_msg={''}/>
+            <Breadcrumb breadcrumbs={breadcrumbs} welcome_msg={''} />
 
-            <Container maxWidth={'xl'} sx={{py: 3}}>
+            <Container maxWidth={'xl'} sx={{ py: 3 }}>
 
-                <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} mt={5}>
+                <Box display={'flex'} sx={{ justifyContent: 'space-between', px: { xs: 0, md: 2 } }} mt={5}>
                     <Typography fontWeight={900} variant={'h5'}>{service.title}</Typography>
-                    <Divider orientation="vertical" flexItem sx={{display: {xs: 'block', md: 'none'}, mx: 2}}/>
+                    <Divider orientation="vertical" flexItem sx={{ display: { xs: 'block', md: 'none' }, mx: 2 }} />
                     <Typography fontWeight={900} variant={'h5'}>{service?.category}</Typography>
                 </Box>
 
-                <Divider sx={{mt: 1}}/>
+                <Divider sx={{ mt: 1 }} />
 
-                <Paper elevation={5} sx={{mt: 2}}>
+                <Paper elevation={5} sx={{ mt: 2 }}>
                     <Grid container>
-                        <Grid item xs={12} md={8} order={{xs: 2, md: 1}}>
+                        <Grid item xs={12} md={8} order={{ xs: 2, md: 1 }}>
                             <Container maxWidth={'xl'}
-                                       sx={{p: 3, display: 'flex', flexDirection: 'column', height: '100%'}}>
+                                       sx={{ p: 3, display: 'flex', flexDirection: 'column', height: '100%' }}>
                                 <Typography fontWeight={500}>{service.full_description}</Typography>
 
                                 <Typography variant={'subtitle2'}
-                                            sx={{mt: 'auto', pt: 5}}><span
-                                    style={{fontWeight: 'bold'}}>Developer</span>: {service.developer}</Typography>
+                                            sx={{ mt: 'auto', pt: 5 }}><span
+                                    style={{ fontWeight: 'bold' }}>Developer</span>: {service.developer}</Typography>
                                 <Typography variant={'subtitle2'}><span
-                                    style={{fontWeight: 'bold'}}>Category</span>: {service.category}</Typography>
+                                    style={{ fontWeight: 'bold' }}>Category</span>: {service.category}</Typography>
                             </Container>
                         </Grid>
 
-                        <Grid item xs={12} md={4} order={{xs: 1, md: 2}} sx={{position: 'relative'}}
+                        <Grid item xs={12} md={4} order={{ xs: 1, md: 2 }} sx={{ position: 'relative' }}
                               className={'serviceImage'}>
 
                             <img
-                                style={{height: '100%', maxHeight: '400px', width: '100%', objectFit: 'cover',}}
+                                style={{ height: '100%', maxHeight: '400px', width: '100%', objectFit: 'cover', }}
                                 src={service.image.source} className={'serviceImage'}
-                                alt=""/>
+                                alt="" />
                         </Grid>
                     </Grid>
 
-                    <Divider/>
+                    <Divider />
 
                     {(service.service_links.length > 0 ||
                         service.github_links.length > 0 ||
@@ -106,15 +106,15 @@ const ServicePage = () => {
                         <Grid container>
                             <Grid item xs={12} md={service.demoVideo ? 6 : 12}>
                                 <Container maxWidth={'xl'}
-                                           sx={{height: '100%', overflow: 'auto', backgroundColor: '#f9f9f9'}}>
-                                    <Stack direction={'row'} sx={{py: 1}} spacing={2}>
-                                        <Typography fontWeight={'bold'} variant={'h6'} sx={{textDecoration: 'underline'}}>
+                                           sx={{ height: '100%', overflow: 'auto', backgroundColor: '#f9f9f9' }}>
+                                    <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
+                                        <Typography fontWeight={'bold'} variant={'h6'} sx={{ textDecoration: 'underline' }}>
                                             Useful Links
                                         </Typography>
                                     </Stack>
                                     {service.service_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
-                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
+                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
+                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
                                                 Service
                                             </Typography>
                                             <Box
@@ -123,7 +123,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'}/>
+                                                <ChevronRightIcon fontSize={'large'} />
                                                 {service.service_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -143,8 +143,10 @@ const ServicePage = () => {
                                                                 borderColor: '#B2C561',
                                                             },
                                                         }}
+                                                        target="_blank" // Open in new tab
+                                                        rel="noopener noreferrer" // Security best practice
                                                     >
-                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -152,8 +154,8 @@ const ServicePage = () => {
                                     )}
 
                                     {service.github_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
-                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
+                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
+                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
                                                 GitHub
                                             </Typography>
                                             <Box
@@ -162,7 +164,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'}/>
+                                                <ChevronRightIcon fontSize={'large'} />
                                                 {service.github_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -182,8 +184,10 @@ const ServicePage = () => {
                                                                 borderColor: '#CCCCCC',
                                                             },
                                                         }}
+                                                        target="_blank" // Open in new tab
+                                                        rel="noopener noreferrer" // Security best practice
                                                     >
-                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -191,8 +195,8 @@ const ServicePage = () => {
                                     )}
 
                                     {service.aiod_links.length > 0 && (
-                                        <Stack direction={'row'} sx={{py: 1}} spacing={2}>
-                                            <Typography variant={'h6'} sx={{my: 'auto', ml: 'auto'}}>
+                                        <Stack direction={'row'} sx={{ py: 1 }} spacing={2}>
+                                            <Typography variant={'h6'} sx={{ my: 'auto', ml: 'auto' }}>
                                                 AIoD
                                             </Typography>
                                             <Box
@@ -201,7 +205,7 @@ const ServicePage = () => {
                                                     justifyContent: 'center',
                                                 }}
                                             >
-                                                <ChevronRightIcon fontSize={'large'}/>
+                                                <ChevronRightIcon fontSize={'large'} />
                                                 {service.aiod_links.map(link => (
                                                     <Button
                                                         key={link.link}
@@ -221,8 +225,10 @@ const ServicePage = () => {
                                                                 borderColor: '#E7DC56',
                                                             },
                                                         }}
+                                                        target="_blank" // Open in new tab
+                                                        rel="noopener noreferrer" // Security best practice
                                                     >
-                                                        <Typography variant="body2" sx={{fontWeight: 'bold'}}>{link.name}</Typography>
+                                                        <Typography variant="body2" sx={{ fontWeight: 'bold' }}>{link.name}</Typography>
                                                     </Button>
                                                 ))}
                                             </Box>
@@ -230,7 +236,7 @@ const ServicePage = () => {
                                     )}
                                 </Container>
                             </Grid>
-                            {service.demoVideo && <Grid item xs={12} md={6} sx={{background: '#f9f9f9'}}>
+                            {service.demoVideo && <Grid item xs={12} md={6} sx={{ background: '#f9f9f9' }}>
                                 <div style={{
                                     display: 'flex',
                                     justifyContent: 'center',
@@ -241,7 +247,7 @@ const ServicePage = () => {
                                         <Button
                                             variant="contained"
                                             size="large"
-                                            startIcon={<YouTubeIcon/>}
+                                            startIcon={<YouTubeIcon />}
                                             sx={{
                                                 fontWeight: 'bold',
                                                 background: '#CC0000',
@@ -263,17 +269,17 @@ const ServicePage = () => {
 
                 </Paper>
 
-                {service.screenshots?.length > 0 && <Grid sx={{py: 3, background: theme.palette.background_screenshots.default, mt: 2, borderRadius: "5px"}}>
-                    <Box display={'flex'} sx={{justifyContent: 'space-between', px: {xs: 0, md: 2}}} >
+                {service.screenshots?.length > 0 && <Grid sx={{ py: 3, background: theme.palette.background_screenshots.default, mt: 2, borderRadius: "5px" }}>
+                    <Box display={'flex'} sx={{ justifyContent: 'space-between', px: { xs: 0, md: 2 } }} >
                         <Typography fontWeight={900} variant={'h5'}>Screenshots</Typography>
                     </Box>
 
-                    <Divider sx={{mt: 1}}/>
+                    <Divider sx={{ mt: 1 }} />
 
                     <div>
                         <Grid container spacing={2} mt={1} px={2}>
                             {service.screenshots?.map((image, index) => (
-                                <Grid item key={index} xs={6} md={3} style={{height: '300px'}}>
+                                <Grid item key={index} xs={6} md={3} style={{ height: '300px' }}>
                                     <div
                                         style={{
                                             position: 'relative',
@@ -313,7 +319,7 @@ const ServicePage = () => {
                                     <img
                                         src={service.screenshots[selectedImageIndex].source}
                                         alt={`Selected ${selectedImageIndex + 1}`}
-                                        style={{maxWidth: '100%', maxHeight: '100%', margin: '0 auto'}}
+                                        style={{ maxWidth: '100%', maxHeight: '100%', margin: '0 auto' }}
                                     />
                                     <div
                                         style={{
