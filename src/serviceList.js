@@ -87,7 +87,7 @@ export const serviceList = [
             "name": "EPCckr Image",
             "source": "/images/services/service_s3.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service3_CARTIF.mp4?csf=1&web=1&e=RUmf26",
+        "demoVideo": "https://youtu.be/ToKApVxLxik",
         "screenshots": [
             {"name": "EPCckr - checked EPC", "source": "/images/screenshots/service_s3/EPCckr - checked EPC.png"},
             {
@@ -125,7 +125,7 @@ export const serviceList = [
             "name": "EPCedv Image",
             "source": "/images/services/service_s4.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service4_CARTIF.mp4?csf=1&web=1&e=Tyy2BW",
+        "demoVideo": "https://youtu.be/vyoeN4QVYmc",
         "screenshots": [
             {
                 "name": "EPCedv - Cadaster data analysis",
@@ -174,7 +174,7 @@ export const serviceList = [
             "name": "CCRF Image",
             "source": "/images/services/service_s5.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY_Service5_CARTIF.mp4?csf=1&web=1&e=9vjE2c",
+        "demoVideo": "https://youtu.be/q7-eUu7szdc",
         "screenshots": [
             {
                 "name": "CCRF - Definition of parameters",
@@ -187,18 +187,19 @@ export const serviceList = [
             }
         ]
     },
-    // No updates
     {
         "id": "service_s6",
-        "title": "Unknown Title",
+        "title": "Twin4DER",
         "developer": "RWTH",
-        "short_description": "No short description provided.",
-        "full_description": "No full description provided.",
+        "short_description": "Digital Twin simulation service for DER.",
+        "full_description": "NA Digital Twin is a virtual model, which can reproduce desired representative characteristics that mimicks the behaviour of real-world physical objects or systems. Twin4DER fullfills this by running a simulation in DPSim, with the data of the electrical network and the data input of the sensors that measure the variables of interest in the circuit. To enable decision making capabilities, it also connects with a load forecasting service that allows the Digital Twin to have a prognosis on the future states of the system.",
         "service_links": [],
-        "github_links": [],
+        "github_links": [
+            {"name": "Code Repository", "link": "https://github.com/I-NERGY/Twin4DER"}
+        ],
         "aiod_links": [
             {
-                "name": "www.ai4europe.eu",
+                "name": "AI Asset",
                 "link": "https://www.ai4europe.eu/research/ai-catalog/twin4der-api-gateway-api-service-power-system-simulations"
             }
         ],
@@ -290,7 +291,7 @@ export const serviceList = [
             "name": "IPMVP Image",
             "source": "/images/services/service_s8.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/sites/I-Nergy-Consortium/_layouts/15/stream.aspx?id=%2Fsites%2FI%2DNergy%2DConsortium%2FDocument%20Library%2F5%20%2D%20Work%20Packages%20Working%20Folders%2FWP4%2FServices%20Video%2FI%2DNERGY%5FService8%5FCARTIF%5FPart1%2Emkv&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
+        "demoVideo": "https://youtu.be/Exlhc9TssrI",
         "screenshots": [
             {"name": "IPMVP - Check results.png", "source": "/images/screenshots/service_s8/IPMVP - Check results.png"},
             {"name": "IPMVP - Check savings.png", "source": "/images/screenshots/service_s8/IPMVP - Check savings.png"},
@@ -442,7 +443,7 @@ export const serviceList = [
             "name": "HRSForecast Image",
             "source": "/images/services/service_s12.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/sites/I-Nergy-Consortium/_layouts/15/stream.aspx?id=%2Fsites%2FI%2DNergy%2DConsortium%2FDocument%20Library%2F5%20%2D%20Work%20Packages%20Working%20Folders%2FWP4%2FServices%20Video%2FI%2DNERGY%20LSP%2D02%20Use%20Cases%203%20and%205%20%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
+        "demoVideo": "https://youtu.be/nVfPDt__ytA",
         "screenshots": [
             {"name": "Screenshot 1", "source": "/images/screenshots/service_s12/p1.png"},
             {"name": "Screenshot 2", "source": "/images/screenshots/service_s12/p2.png"},
@@ -477,7 +478,7 @@ export const serviceList = [
             "name": "HRSOptim Image",
             "source": "/images/services/service_s13.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/sites/I-Nergy-Consortium/_layouts/15/stream.aspx?id=%2Fsites%2FI%2DNergy%2DConsortium%2FDocument%20Library%2F5%20%2D%20Work%20Packages%20Working%20Folders%2FWP4%2FServices%20Video%2FI%2DNERGY%20LSP%2D02%20Use%20Cases%203%20and%205%20%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
+        "demoVideo": "https://youtu.be/nVfPDt__ytA",
     },
     {
         "id": "service_s14",
@@ -508,7 +509,7 @@ export const serviceList = [
             "name": "Virtual Workbench Image",
             "source": "/images/services/service_s14.jpg"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/I-NERGY%20Virtual%20Workbench%20-%20v1.0.mp4?csf=1&web=1&e=AmuryE",
+        "demoVideo": "https://youtu.be/IQnnI3NEd3s",
         "screenshots": [
             {"name": "Data source management", "source": "/images/screenshots/service_s14/Data source management.jpg"},
             {"name": "Datasets", "source": "/images/screenshots/service_s14/Datasets.jpg"},
@@ -617,7 +618,7 @@ export const serviceList = [
             "name": "Model evaluation & serving framework Image",
             "source": "/images/services/service_s18.png"
         },
-        "demovideo": "https://epuntuagr.sharepoint.com/:v:/r/sites/I-Nergy-Consortium/Document%20Library/5%20-%20Work%20Packages%20Working%20Folders/WP4/Services%20Video/Evaluation%20and%20Serving%20Framework%20v1.0.mp4?csf=1&web=1&e=LXlBzw"
+        "demovideo": "https://youtu.be/FtAPm9itoSo"
     },
     {
         "id": "service_s19",
