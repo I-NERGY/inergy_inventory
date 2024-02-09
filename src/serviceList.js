@@ -22,17 +22,17 @@ export const serviceList = [
         "category": "General",
         "image": {
             "name": "Visual Analytics Image",
-            "source": "/images/services/service_s1.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s1.png"
         },
         "demoVideo": "",
         "screenshots": [
-            {"name": "Charging Capacity", "source": "/images/screenshots/service_s1/Charging Capacity.png"},
-            {"name": "Consumption Graph", "source": "/images/screenshots/service_s1/Consumption Graph.png"},
-            {"name": "General Info", "source": "/images/screenshots/service_s1/General Info.png"},
-            {"name": "Temperature", "source": "/images/screenshots/service_s1/Temperature.png"},
+            {"name": "Charging Capacity", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Charging Capacity.png"},
+            {"name": "Consumption Graph", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Consumption Graph.png"},
+            {"name": "General Info", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/General Info.png"},
+            {"name": "Temperature", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Temperature.png"},
             {
                 "name": "Voltage Measurement Graph",
-                "source": "/images/screenshots/service_s1/Voltage Measurement Graph.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Voltage Measurement Graph.png"
             },
         ]
     },
@@ -53,14 +53,14 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "DT Service Image",
-            "source": "/images/services/service_s2.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s2.png"
         },
         "demoVideo": "",
         "screenshots": [
-            {"name": "Add Meter", "source": "/images/screenshots/service_s2/add_meter_dt.png"},
-            {"name": "Asset Page summary", "source": "/images/screenshots/service_s2/asset_page_Summary.png"},
-            {"name": "Homepage", "source": "/images/screenshots/service_s2/homepage_dt.png"},
-            {"name": "Station Page", "source": "/images/screenshots/service_s2/station_page_dt.png"},
+            {"name": "Add Meter", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/add_meter_dt.png"},
+            {"name": "Asset Page summary", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/asset_page_Summary.png"},
+            {"name": "Homepage", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/homepage_dt.png"},
+            {"name": "Station Page", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/station_page_dt.png"},
         ]
     },
     {
@@ -85,19 +85,19 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "EPCckr Image",
-            "source": "/images/services/service_s3.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s3.png"
         },
         "demoVideo": "https://youtu.be/ToKApVxLxik",
         "screenshots": [
-            {"name": "EPCckr - checked EPC", "source": "/images/screenshots/service_s3/EPCckr - checked EPC.png"},
+            {"name": "EPCckr - checked EPC", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s3/EPCckr - checked EPC.png"},
             {
                 "name": "EPCckr - checked EPC details",
-                "source": "/images/screenshots/service_s3/EPCckr - checked EPC details.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s3/EPCckr - checked EPC details.png"
             },
-            {"name": "EPCckr - Login", "source": "/images/screenshots/service_s3/EPCckr - Login.png"},
+            {"name": "EPCckr - Login", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s3/EPCckr - Login.png"},
             {
                 "name": "EPCckr - selection screen",
-                "source": "/images/screenshots/service_s3/EPCckr - selection screen.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s3/EPCckr - selection screen.png"
             },
         ]
     },
@@ -123,30 +123,30 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "EPCedv Image",
-            "source": "/images/services/service_s4.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s4.png"
         },
         "demoVideo": "https://youtu.be/vyoeN4QVYmc",
         "screenshots": [
             {
                 "name": "EPCedv - Cadaster data analysis",
-                "source": "/images/screenshots/service_s4/EPCedv-Cadaster_data_analysis.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv-Cadaster_data_analysis.png"
             },
             {
                 "name": "EPCedv - Detail of a building EPC",
-                "source": "/images/screenshots/service_s4/EPCedv - Detail of a building EPC.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv - Detail of a building EPC.png"
             },
             {
                 "name": "EPCedv - EPCs data analysis",
-                "source": "/images/screenshots/service_s4/EPCedv - EPCs data analysis.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv - EPCs data analysis.png"
             },
             {
                 "name": "EPCedv - Estimated Demand Viewer, building scale",
-                "source": "/images/screenshots/service_s4/EPCedv - Estimated Demand Viewer, building scale.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv - Estimated Demand Viewer, building scale.png"
             },
-            {"name": "EPCedv - Login", "source": "/images/screenshots/service_s4/EPCedv - Login.png"},
+            {"name": "EPCedv - Login", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv - Login.png"},
             {
                 "name": "EPCedv - EPC Viewer, municipality scale",
-                "source": "/images/screenshots/service_s4/EPCedv - EPC Viewer, municipality scale.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s4/EPCedv - EPC Viewer, municipality scale.png"
             },
         ]
     },
@@ -172,18 +172,18 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "CCRF Image",
-            "source": "/images/services/service_s5.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s5.png"
         },
         "demoVideo": "https://youtu.be/q7-eUu7szdc",
         "screenshots": [
             {
                 "name": "CCRF - Definition of parameters",
-                "source": "/images/screenshots/service_s5/CCRF - Definition of parameters.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s5/CCRF - Definition of parameters.png"
             },
-            {"name": "CCRF - Login", "source": "/images/screenshots/service_s5/CCRF - Login.png"},
+            {"name": "CCRF - Login", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s5/CCRF - Login.png"},
             {
                 "name": "CCRF - Results of solar PV production",
-                "source": "/images/screenshots/service_s5/CCRF - Results of solar PV production.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s5/CCRF - Results of solar PV production.png"
             }
         ]
     },
@@ -205,7 +205,7 @@ export const serviceList = [
         ],
         "category": "I-NET, I-DER",
         "image": {
-            "name": "Service C Image",
+            "name": "Twin4DER Image",
             "source": "https://via.placeholder.com/400x300"
         }
     },
@@ -231,7 +231,7 @@ export const serviceList = [
     //     "category": "I-NET, I-DER",
     //     "image": {
     //         "name": "Service C Image",
-    //         "source": "https://via.placeholder.com/400x300"
+    //         "source": process.env.PUBLIC_URL + "https://via.placeholder.com/400x300"
     //     }
     // },
     {
@@ -256,15 +256,15 @@ export const serviceList = [
         "category": "I-NET",
         "image": {
             "name": "CB Asset Management Image",
-            "source": "/images/services/service_s7.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s7.png"
         },
-        "demoVideo": "https://epuntuagr.sharepoint.com/:p:/r/sites/I-Nergy-Consortium/Document%20Library/3%20-%20Meetings/5th%20Plenary%20Meeting%2020-21-09-2023%20RIGA/WP5/WP5%20-%20videos/LSP1/I-NERGY%20Presentation_video_LSP1.pptx?d=w5d07f85b178f4493bb7a4b97fd1c61e1&csf=1&web=1&e=63HiuO",
+        "demoVideo": "https://www.youtube.com/watch?v=NqN5IwgzzdE",
         "screenshots": [
-            {"name": "Asset Management Table", "source": "/images/screenshots/service_s7/Asset Management Table.png"},
-            {"name": "Fault Analysis", "source": "/images/screenshots/service_s7/Fault Analysis.png"},
-            {"name": "Homepage", "source": "/images/screenshots/service_s7/Homepage.png"},
-            {"name": "Login", "source": "/images/screenshots/service_s7/Login.png"},
-            {"name": "Upload Fault", "source": "/images/screenshots/service_s7/Upload Fault.png"},
+            {"name": "Asset Management Table", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s7/Asset Management Table.png"},
+            {"name": "Fault Analysis", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s7/Fault Analysis.png"},
+            {"name": "Homepage", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s7/Homepage.png"},
+            {"name": "Login", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s7/Login.png"},
+            {"name": "Upload Fault", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s7/Upload Fault.png"},
         ]
     },
     {
@@ -289,19 +289,19 @@ export const serviceList = [
         "category": "I-DER",
         "image": {
             "name": "IPMVP Image",
-            "source": "/images/services/service_s8.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s8.png"
         },
         "demoVideo": "https://youtu.be/Exlhc9TssrI",
         "screenshots": [
-            {"name": "IPMVP - Check results.png", "source": "/images/screenshots/service_s8/IPMVP - Check results.png"},
-            {"name": "IPMVP - Check savings.png", "source": "/images/screenshots/service_s8/IPMVP - Check savings.png"},
-            {"name": "IPMVP - Create plan.png", "source": "/images/screenshots/service_s8/IPMVP - Create plan.png"},
-            {"name": "IPMVP - Define plan.png", "source": "/images/screenshots/service_s8/IPMVP - Define plan.png"},
+            {"name": "IPMVP - Check results.png", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Check results.png"},
+            {"name": "IPMVP - Check savings.png", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Check savings.png"},
+            {"name": "IPMVP - Create plan.png", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Create plan.png"},
+            {"name": "IPMVP - Define plan.png", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Define plan.png"},
             {
                 "name": "IPMVP - Generate model.png",
-                "source": "/images/screenshots/service_s8/IPMVP - Generate model.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Generate model.png"
             },
-            {"name": "IPMVP - Login.png", "source": "/images/screenshots/service_s8/IPMVP - Login.png"},
+            {"name": "IPMVP - Login.png", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s8/IPMVP - Login.png"},
         ]
     },
     {
@@ -328,27 +328,27 @@ export const serviceList = [
         "category": "I-DER",
         "image": {
             "name": "FlexDR Image",
-            "source": "/images/services/service_s9.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s9.png"
         },
         "demoVideo": "https://www.youtube.com/watch?v=prrDUJGVt00",
         "screenshots": [
             {
                 "name": "FlexDR - Assignments page",
-                "source": "/images/screenshots/service_s9/FlexDR - Assignments page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Assignments page.png"
             },
             {
                 "name": "FlexDR - Clusters Profiles page",
-                "source": "/images/screenshots/service_s9/FlexDR - Clusters Profiles page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Clusters Profiles page.png"
             },
-            {"name": "FlexDR - Daily Tip page", "source": "/images/screenshots/service_s9/FlexDR - Daily Tip page.png"},
-            {"name": "FlexDR - Homepage", "source": "/images/screenshots/service_s9/FlexDR - Homepage.png"},
+            {"name": "FlexDR - Daily Tip page", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Daily Tip page.png"},
+            {"name": "FlexDR - Homepage", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Homepage.png"},
             {
                 "name": "FlexDR - New Cluster page",
-                "source": "/images/screenshots/service_s9/FlexDR - New Cluster page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - New Cluster page.png"
             },
             {
                 "name": "FlexDR - Smart Meters page",
-                "source": "/images/screenshots/service_s9/FlexDR - Smart meters page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Smart meters page.png"
             },
         ]
     },
@@ -376,26 +376,26 @@ export const serviceList = [
         "category": "I-NET, I-DER, I-ENEF",
         "image": {
             "name": "DeepTSF Image",
-            "source": "/images/services/service_s10.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s10.png"
         },
         "demoVideo": "https://www.youtube.com/watch?v=NuhHNYefbB8",
         "screenshots": [
-            {"name": "DeepTSF - Homepage", "source": "/images/screenshots/service_s10/DeepTSF - Homepage.png"},
+            {"name": "DeepTSF - Homepage", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s10/DeepTSF - Homepage.png"},
             {
                 "name": "DeepTSF - Codeless Forecast page",
-                "source": "/images/screenshots/service_s10/DeepTSF - Codeless Forecast.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s10/DeepTSF - Codeless Forecast.png"
             },
             {
                 "name": "DeepTSF - Experiment Tracking page",
-                "source": "/images/screenshots/service_s10/DeepTSF - Experiment Tracking.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s10/DeepTSF - Experiment Tracking.png"
             },
             {
                 "name": "DeepTSF - Experiment Tracking page (2)",
-                "source": "/images/screenshots/service_s10/DeepTSF - Experiment Tracking (2).png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s10/DeepTSF - Experiment Tracking (2).png"
             },
             {
                 "name": "DeepTSF - System Monitoring page",
-                "source": "/images/screenshots/service_s10/DeepTSF - System Monitoring.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s10/DeepTSF - System Monitoring.png"
             },
         ]
     },
@@ -415,7 +415,7 @@ export const serviceList = [
         ],
         "category": "I-NET",
         "image": {
-            "name": "Service C Image",
+            "name": "Net Load Forecasting Image",
             "source": "https://via.placeholder.com/400x300"
         }
     },
@@ -445,13 +445,13 @@ export const serviceList = [
         "category": "I-NET",
         "image": {
             "name": "HRSForecast Image",
-            "source": "/images/services/service_s12.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s12.png"
         },
         "demoVideo": "https://youtu.be/nVfPDt__ytA",
         "screenshots": [
-            {"name": "Screenshot 1", "source": "/images/screenshots/service_s12/p1.png"},
-            {"name": "Screenshot 2", "source": "/images/screenshots/service_s12/p2.png"},
-            {"name": "Screenshot 3", "source": "/images/screenshots/service_s12/p3.png"}
+            {"name": "Screenshot 1", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s12/p1.png"},
+            {"name": "Screenshot 2", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s12/p2.png"},
+            {"name": "Screenshot 3", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s12/p3.png"}
         ]
     },
     {
@@ -480,7 +480,7 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "HRSOptim Image",
-            "source": "/images/services/service_s13.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s13.png"
         },
         "demoVideo": "https://youtu.be/nVfPDt__ytA",
     },
@@ -511,28 +511,28 @@ export const serviceList = [
         "category": "General",
         "image": {
             "name": "Virtual Workbench Image",
-            "source": "/images/services/service_s14.jpg"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s14.jpg"
         },
         "demoVideo": "https://youtu.be/IQnnI3NEd3s",
         "screenshots": [
-            {"name": "Data source management", "source": "/images/screenshots/service_s14/Data source management.jpg"},
-            {"name": "Datasets", "source": "/images/screenshots/service_s14/Datasets.jpg"},
-            {"name": "Datasets ASM", "source": "/images/screenshots/service_s14/datasets ASM.jpg"},
-            {"name": "Function script", "source": "/images/screenshots/service_s14/Function script.jpg"},
-            {"name": "ML Function catalogue", "source": "/images/screenshots/service_s14/ML Function catalogue.jpg"},
-            {"name": "ML Script definition", "source": "/images/screenshots/service_s14/ML Script definition.jpg"},
-            {"name": "Models metadata", "source": "/images/screenshots/service_s14/Models metadata.jpg"},
+            {"name": "Data source management", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Data source management.jpg"},
+            {"name": "Datasets", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Datasets.jpg"},
+            {"name": "Datasets ASM", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/datasets ASM.jpg"},
+            {"name": "Function script", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Function script.jpg"},
+            {"name": "ML Function catalogue", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/ML Function catalogue.jpg"},
+            {"name": "ML Script definition", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/ML Script definition.jpg"},
+            {"name": "Models metadata", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Models metadata.jpg"},
             {
                 "name": "Models resources selection cockpit",
-                "source": "/images/screenshots/service_s14/Models resources selection cockpit.jpg"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Models resources selection cockpit.jpg"
             },
             {
                 "name": "Service Cockpit example 1",
-                "source": "/images/screenshots/service_s14/Service Cockpit example 1.jpg"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Service Cockpit example 1.jpg"
             },
             {
                 "name": "Service Cockpit example 2",
-                "source": "/images/screenshots/service_s14/Service Cockpit example 2.jpg"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s14/Service Cockpit example 2.jpg"
             },
         ]
     },
@@ -548,11 +548,11 @@ export const serviceList = [
         "category": "I-DER",
         "image": {
             "name": "COMSrecast Image",
-            "source": "/images/services/service_s15.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s15.png"
         },
-        "demoVideo": "https://comsensuseu-my.sharepoint.com/personal/blaz_bertalanic_comsensus_eu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fblaz%5Fbertalanic%5Fcomsensus%5Feu%2FDocuments%2FASMterni%5Fdemo%5Fvideo%2Fcomsensus%5Fasmterni%5Fdemo%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
+        "demoVideo": "https://www.youtube.com/watch?v=NbIMaeLiU-8",
         "screenshots": [
-            {"name": "Anomaly Monitor", "source": "/images/screenshots/service_s15/Anomaly Monitor.png"}
+            {"name": "Anomaly Monitor", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s15/Anomaly Monitor.png"}
         ]
     },
     {
@@ -567,8 +567,9 @@ export const serviceList = [
         "category": "I-DER",
         "image": {
             "name": "COMSrecast Image",
-            "source": "/images/services/service_s16.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s16.png"
         },
+        "demoVideo": "https://www.youtube.com/watch?v=NbIMaeLiU-8",
     },
     {
         "id": "service_s17",
@@ -592,23 +593,23 @@ export const serviceList = [
         "category": "I-ENEF",
         "image": {
             "name": "EEI-DSS Image",
-            "source": "/images/services/service_s17.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s17.png"
         },
         "demoVideo": "https://www.youtube.com/watch?v=LxWkLm2YKDc",
         "screenshots": [
-            {"name": "EEI-DSS - Homepage.", "source": "/images/screenshots/service_s17/EEI-DSS - Homepage.png"},
+            {"name": "EEI-DSS - Homepage.", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s17/EEI-DSS - Homepage.png"},
             {
                 "name": "EEI-DSS - Plan Investment page.",
-                "source": "/images/screenshots/service_s17/EEI-DSS - Plan Investment page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s17/EEI-DSS - Plan Investment page.png"
             },
             {
                 "name": "EEI-DSS - Virtual EPC and Innovation Measures page.",
-                "source": "/images/screenshots/service_s17/EEI-DSS - Virtual EPC and Innovation Measures page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s17/EEI-DSS - Virtual EPC and Innovation Measures page.png"
             },
-            {"name": "EEI-DSS - Admin page.", "source": "/images/screenshots/service_s17/EEI-DSS - Admin page.png"},
+            {"name": "EEI-DSS - Admin page.", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s17/EEI-DSS - Admin page.png"},
             {
                 "name": "EEI-DSS - Energy Measures Addition page.",
-                "source": "/images/screenshots/service_s17/EEI-DSS - Energy Measures Addition page.png"
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s17/EEI-DSS - Energy Measures Addition page.png"
             },
         ]
 
@@ -625,7 +626,7 @@ export const serviceList = [
         "category": "Technical Enablers",
         "image": {
             "name": "Model evaluation & serving framework Image",
-            "source": "/images/services/service_s18.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s18.png"
         },
         "demovideo": "https://youtu.be/FtAPm9itoSo"
     },
@@ -651,9 +652,9 @@ export const serviceList = [
         "category": "Technical Enablers",
         "image": {
             "name": "TLWizard Image",
-            "source": "/images/services/service_s19.png"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s19.png"
         },
-        "demoVideo": "https://comsensuseu-my.sharepoint.com/:v:/g/personal/blaz_bertalanic_comsensus_eu/EbDTXYsKMutEu054hWnVehoBU-8iV65K5wnBN1MBlkP8zQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=7vHA4M",
+        "demoVideo": "",
 
     },
     {
@@ -671,7 +672,6 @@ export const serviceList = [
         ],
         "aiod_links": [],
         "category": "Technical Enablers",
-        "image": {"name": "MLFlow image", "source": "/images/services/mlflow.png"}
+        "image": {"name": "MLFlow image", "source": process.env.PUBLIC_URL + "/images/services/mlflow.png"}
     }
-
 ]

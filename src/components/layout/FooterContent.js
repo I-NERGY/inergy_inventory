@@ -24,13 +24,13 @@ const FooterContent = () => {
                 <Grid item xs={12} md={4}>
                     <Stack direction={'row'} justifyContent="center"
                            alignItems="center">
-                        <img src="/images/aiod.svg" alt="AIoD logo" height={'70px'}
+                        <img src={process.env.PUBLIC_URL + "/images/aiod.svg"} alt="AIoD logo" height={'70px'}
                              style={{objectFit: 'cover', marginRight: '50px'}}/>
-                        <img src="/images/i-nergy_logo_trans_back.png" alt="I-NERGY logo" height={'70px'}
+                        <img src={process.env.PUBLIC_URL +"/images/i-nergy_logo_trans_back.png"} alt="I-NERGY logo" height={'70px'}
                              style={{objectFit: 'cover'}}/>
                     </Stack>
                     <Stack direction={'row'} mt={3} px={5}>
-                        <img src="/images/ec_logo.svg" alt="EU logo" height={'100px'}
+                        <img src={process.env.PUBLIC_URL +"/images/ec_logo.svg"} alt="EU logo" height={'100px'}
                              style={{objectFit: 'cover', marginRight: '10px'}}/>
                         <Typography variant={'caption'}
                                     color={'white'}>
