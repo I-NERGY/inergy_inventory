@@ -315,9 +315,13 @@ export const serviceList = [
         ],
         "github_links": [
             {
-                "name": "Code repository",
+                "name": "Back-End",
                 "link": "https://github.com/I-NERGY/FlexDR"
-            }
+            },
+            {
+                "name": "Front-End",
+                "link": "https://github.com/I-NERGY/FlexDR_frontend"
+            },
         ],
         "aiod_links": [
             {
@@ -340,8 +344,10 @@ export const serviceList = [
                 "name": "FlexDR - Clusters Profiles page",
                 "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Clusters Profiles page.png"
             },
-            {"name": "FlexDR - Daily Tip page", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Daily Tip page.png"},
-            {"name": "FlexDR - Homepage", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Homepage.png"},
+            {"name": "FlexDR - Daily Tip page",
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Daily Tip page.png"},
+            {"name": "FlexDR - Homepage",
+                "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - Homepage.png"},
             {
                 "name": "FlexDR - New Cluster page",
                 "source": process.env.PUBLIC_URL + "/images/screenshots/service_s9/FlexDR - New Cluster page.png"
