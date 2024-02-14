@@ -86,6 +86,9 @@ export default function Layout({children}) {
         }));
     };
 
+
+    console.log('aiaiai', keycloak?.tokenParsed?.preferred_username)
+
     return (
         <>
             <Box sx={{display: 'flex', minHeight: `calc(100vh - 60px)`}}>
