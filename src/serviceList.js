@@ -434,7 +434,7 @@ export const serviceList = [
         "service_links": [
             {
                 "name": "Service Page",
-                "link": "https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template, https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template"
+                "link": "https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template, https://aiexp.ai4europe.eu/#/marketSolutions?solutionId=2ef3e3fb-afe9-422a-b037-88168d219a80&revisionId=1aaf2a4e-70e3-41e8-bb4e-7d3f1cb985d8&parentUrl=marketplace#md-model-detail-template "
             }
         ],
         "github_links": [],
@@ -660,7 +660,7 @@ export const serviceList = [
             "name": "TLWizard Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s19.png"
         },
-        "demoVideo": "",
+        "demoVideo": "https://www.youtube.com/watch?v=2Juspqr49TQ",
 
     },
     {
