@@ -120,7 +120,7 @@ export default function Layout({children}) {
                             </Link>
                         </Stack>
 
-                        {keycloak.authenticated === true && (
+                        {!keycloak.authenticated === true && (
                             <>
                                 <Typography sx={{ml: 'auto'}} style={{color: 'white'}}>
                                     Welcome, {keycloak?.tokenParsed?.preferred_username}
