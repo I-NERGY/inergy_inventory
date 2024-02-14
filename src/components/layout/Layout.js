@@ -87,8 +87,6 @@ export default function Layout({children}) {
     };
 
 
-    console.log('aiaiai', keycloak?.tokenParsed?.preferred_username)
-
     return (
         <>
             <Box sx={{display: 'flex', minHeight: `calc(100vh - 60px)`}}>
@@ -123,7 +121,7 @@ export default function Layout({children}) {
                             </Link>
                         </Stack>
 
-                        {!keycloak.authenticated === true && (
+                        {keycloak.authenticated === true && (
                             <>
                                 <Typography sx={{ml: 'auto'}} style={{color: 'white'}}>
                                     Welcome, {keycloak?.tokenParsed?.preferred_username}
