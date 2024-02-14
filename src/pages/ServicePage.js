@@ -21,6 +21,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import InfoIcon from '@mui/icons-material/Info';
 
 import Breadcrumb from "../components/layout/Breadcrumb";
 
@@ -64,6 +66,23 @@ const ServicePage = () => {
             <Breadcrumb breadcrumbs={breadcrumbs} welcome_msg={''} />
 
             <Container maxWidth={'xl'} sx={{ py: 3 }}>
+
+                <Paper sx={{px: 2, py: 1, mt: 3}} elevation={3}>
+                    <Grid container spacing={2} justifyContent={'center'} alignItems={'center'}>
+                        <Grid item xs={2} md={1}>
+                            <InfoIcon sx={{
+                                fontSize: {xs: '50px', md: '80px'},
+                                color: 'rgba(0, 71, 187, 0.8)'
+                            }} />
+                        </Grid>
+
+                        <Grid item xs={10} md={11}>
+                            <Typography variant={'subtitle1'}>
+                                {service.short_description}
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Paper>
 
                 <Box display={'flex'} sx={{ justifyContent: 'space-between', px: { xs: 0, md: 2 } }} mt={5}>
                     <Typography fontWeight={900} variant={'h5'}>{service.title}</Typography>
