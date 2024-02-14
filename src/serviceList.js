@@ -422,7 +422,7 @@ export const serviceList = [
         "category": "I-NET",
         "image": {
             "name": "Net Load Forecasting Image",
-            "source": "https://via.placeholder.com/400x300"
+            "source": process.env.PUBLIC_URL + "/images/services/service_s11.png"
         }
     },
     {
@@ -588,7 +588,7 @@ export const serviceList = [
         ],
         "github_links": [
             {"name": "Front-End", "link": "Front-end: https://github.com/I-NERGY/EEI_Service_frontend"},
-            {"name": "Back-End", "link": "https://github.com/I-NERGY/EEIService"},
+            {"name": "Back-End", "link": "https://github.com/I-NERGY/EEI_Service_backend"},
         ],
         "aiod_links": [
             {
