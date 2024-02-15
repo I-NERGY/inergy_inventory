@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <ReactKeycloakProvider authClient={my_keycloak} initOptions={{onLoad: 'login-required'}}>
         <React.StrictMode>
-            <BrowserRouter basename={'inventory'}>
+            <BrowserRouter basename={''}>
                 <Routes>
                     <Route path={'/*'} element={<App/>}/>
                 </Routes>
