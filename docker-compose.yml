@@ -23,8 +23,8 @@ services:
       - ./letsencrypt:/etc/letsencrypt
     depends_on:
       - db
-#    networks:
-#      - custom_network # Define a custom network for both services
+    networks:
+      - inergy_network # Define a custom network for both services
 
   db:
     image: 'jc21/mariadb-aria:latest'
@@ -37,8 +37,8 @@ services:
       MARIADB_AUTO_UPGRADE: '1'
     volumes:
       - ./mysql:/var/lib/mysql
-#    networks:
-#      - custom_network # Use the same custom network for the database
+    networks:
+      - inergy_network # Use the same custom network for the database
 
   react-app:
     build:
@@ -46,8 +46,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3002:3000" # Map port 3002
-#    networks:
-#      - custom_network # Use the same custom network for your React app
+    networks:
+      - inergy_network # Use the same custom network for your React app
 
 networks:
-  custom_network: # Define the custom network
+  inergy_network: # Define the custom network
