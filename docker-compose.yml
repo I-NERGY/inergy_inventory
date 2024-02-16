@@ -50,4 +50,5 @@ services:
       - inergy_network # Use the same custom network for your React app
 
 networks:
-  inergy_network: # Define the custom network
+  inergy_network:
+    name: inergy_network # Define the custom network
