@@ -30,6 +30,7 @@ import SegmentIcon from '@mui/icons-material/Segment';
 import {Main, AppBar, DrawerHeader, Footer} from './LayoutComponents';
 import FooterContent from './FooterContent';
 import MenuButton from './MenuButton';
+import SearchList from "./SearchList";
 
 import {appbarMenuButtonItems} from '../../appbarMenuButtonItems';
 import {serviceList} from '../../serviceList';
@@ -98,35 +99,38 @@ export default function Layout({children}) {
                             aria-label="open drawer"
                             onClick={handleDrawerOpen}
                             edge="start"
-                            sx={{mr: 2, color: 'white', ...(open && {display: 'none'})}}
+                            sx={{ mr: 2, color: 'white', ...(open && { display: 'none' }) }}
                         >
-                            <MenuIcon/>
+                            <MenuIcon />
                         </IconButton>
                         <Stack direction={'row'}>
                             <Link to="/">
                                 <img
-                                    src ={`${process.env.PUBLIC_URL}/images/i-nergy_logo_trans_back.png`}
+                                    src={`${process.env.PUBLIC_URL}/images/i-nergy_logo_trans_back.png`}
                                     alt="I-NERGY logo"
                                     height={'60px'}
-                                    style={{objectFit: 'cover', marginRight: '10px'}}
+                                    style={{ objectFit: 'cover', marginRight: '10px' }}
                                 />
                             </Link>
                             <Link to="/">
                                 <img
-                                    src ={`${process.env.PUBLIC_URL}/images/aiod.svg`}
+                                    src={`${process.env.PUBLIC_URL}/images/aiod.svg`}
                                     alt="AIoD logo"
                                     height={'60px'}
-                                    style={{objectFit: 'cover'}}
+                                    style={{ objectFit: 'cover' }}
                                 />
                             </Link>
                         </Stack>
 
                         {keycloak.authenticated === true && (
                             <>
-                                <Typography sx={{ml: 'auto'}} style={{color: 'white'}}>
+                                <Box sx={{ textAlign: 'center', width: '50%', marginX: 'auto', px: 3 }}> {/* Center the SearchList */}
+                                    <SearchList />
+                                </Box>
+                                <Typography sx={{ ml: 'auto' }} style={{ color: 'white' }}>
                                     Welcome, {keycloak?.tokenParsed?.preferred_username}
                                 </Typography>
-                                <MenuButton subLinks={appbarMenuButtonItems} signout={handleSignOut}/>
+                                <MenuButton subLinks={appbarMenuButtonItems} signout={handleSignOut} />
                             </>
                         )}
                     </Toolbar>
