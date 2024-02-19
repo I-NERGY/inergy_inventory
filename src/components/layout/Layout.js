@@ -105,12 +105,12 @@ export default function Layout({children}) {
                         </IconButton>
                         <Stack direction={'row'}>
                             <Link to="/">
-                                <img
-                                    src={`/images/i-nergy_logo_trans_back.png`}
-                                    alt="I-NERGY logo"
-                                    height={'60px'}
-                                    style={{ objectFit: 'cover', marginRight: '10px' }}
-                                />
+                                {/*<img*/}
+                                {/*    src={`/images/i-nergy_logo_trans_back.png`}*/}
+                                {/*    alt="I-NERGY logo"*/}
+                                {/*    height={'60px'}*/}
+                                {/*    style={{ objectFit: 'cover', marginRight: '10px' }}*/}
+                                {/*/>*/}
                             </Link>
                             <Link to="/">
                                 <img
