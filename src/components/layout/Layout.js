@@ -106,7 +106,7 @@ export default function Layout({children}) {
                         <Stack direction={'row'}>
                             <Link to="/">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/images/i-nergy_logo_trans_back.png`}
+                                    src={`/images/i-nergy_logo_trans_back.png`}
                                     alt="I-NERGY logo"
                                     height={'60px'}
                                     style={{ objectFit: 'cover', marginRight: '10px' }}
@@ -114,7 +114,7 @@ export default function Layout({children}) {
                             </Link>
                             <Link to="/">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/images/aiod.svg`}
+                                    src={`/images/aiod.svg`}
                                     alt="AIoD logo"
                                     height={'60px'}
                                     style={{ objectFit: 'cover' }}
