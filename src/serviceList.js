@@ -159,8 +159,8 @@ export const serviceList = [
         "service_links": [
             {
                 "name": "Service Page",
-                "link": "https://tools.cartif.es/inergy-radiacion"
-            }
+                "link": "http://digital-twin.k8s.eonerc.rwth-aachen.de/"
+            },
         ],
         "github_links": [],
         "aiod_links": [
@@ -192,8 +192,13 @@ export const serviceList = [
         "title": "Twin4DER",
         "developer": "RWTH",
         "short_description": "Digital Twin simulation service for DER.",
-        "full_description": "NA Digital Twin is a virtual model, which can reproduce desired representative characteristics that mimicks the behaviour of real-world physical objects or systems. Twin4DER fullfills this by running a simulation in DPSim, with the data of the electrical network and the data input of the sensors that measure the variables of interest in the circuit. To enable decision making capabilities, it also connects with a load forecasting service that allows the Digital Twin to have a prognosis on the future states of the system.",
-        "service_links": [],
+        "full_description": "A Digital Twin is a virtual model, which can reproduce desired representative characteristics that mimicks the behaviour of real-world physical objects or systems. Twin4DER fullfills this by running a simulation in DPSim, with the data of the electrical network and the data input of the sensors that measure the variables of interest in the circuit. To enable decision making capabilities, it also connects with a load forecasting service that allows the Digital Twin to have a prognosis on the future states of the system.",
+        "service_links": [
+            {
+                "name": "Service Page",
+                "link": "https://tools.cartif.es/inergy-radiacion"
+            }
+        ],
         "github_links": [
             {"name": "Code Repository", "link": "https://github.com/I-NERGY/Twin4DER"}
         ],
@@ -206,8 +211,23 @@ export const serviceList = [
         "category": "I-NET, I-DER",
         "image": {
             "name": "Twin4DER Image",
-            "source": "https://via.placeholder.com/400x300"
-        }
+            "source": process.env.PUBLIC_URL + "/images/services/service_s6.png"
+        },
+        "demoVideo": "",
+        "screenshots": [
+            {"name": "Twin4DER - Circuit from the pilot partner", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Circuit from the pilot partner.png"},
+            {"name": "Twin4DER - Circuit graphic in DPsim", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Circuit graphic in DPsim.png"},
+            {"name": "Twin4DER - Forecast retrieval", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Forecast retrieval.png"},
+            {"name": "Twin4DER - Forecasted measurement preprocessing", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Forecasted measurement preprocessing.png"},
+            {"name": "Twin4DER - Results from Forecasted Simulation", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Results from Forecasted Simulation.png"},
+            {"name": "Twin4DER - Results from Simulation", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Results from Simulation.png"},
+            {"name": "Twin4DER - Results of forecasted measurements", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Results of forecasted measurements.png"},
+            {"name": "Twin4DER - Results with DPsim", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Results with DPsim.png"},
+            {"name": "Twin4DER - Simulation Setup", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Simulation Setup.png"},
+            {"name": "Twin4DER - Simulation with DPsim and harmonised data", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Simulation with DPsim and harmonised data.png"},
+            {"name": "Twin4DER - Simulation with forecast log output", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Simulation with forecast log output.png"},
+
+        ]
     },
     // No updates - mallon paei gia founto
     // {
