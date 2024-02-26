@@ -70,7 +70,13 @@ function Homepage() {
         window.scrollTo(0, 0);
     }, []);
 
-    const categoryOrder = ['General', 'I-ENEF', 'I-NET', 'I-DER', 'Technical Enablers'];
+    const categoryOrder = [
+        'ΑΙ for Energy Networks (I-NET)',
+        'AI for Distributed Energy Resources (I-DER)',
+        'AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)',
+        'General Analytic Tools',
+        'Tools for ML Pipeline'
+    ];
 
     const initializedCategories = categoryOrder.reduce((acc, category) => {
         acc[category] = [];
@@ -122,7 +128,7 @@ function Homepage() {
                     >
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
-                            sx={{ height: '100px', minHeight: '100px', alignItems: 'center' }}
+                            sx={{height: '100px', minHeight: '100px', alignItems: 'center'}}
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >

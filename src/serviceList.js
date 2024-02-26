@@ -19,7 +19,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
             }
         ],
-        "category": "General",
+        "category": "General Analytic Tools",
         "image": {
             "name": "Visual Analytics Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s1.png"
@@ -50,7 +50,7 @@ export const serviceList = [
             "name": "AI Asset",
             "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
         }],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "DT Service Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s2.png"
@@ -82,7 +82,7 @@ export const serviceList = [
                 "link": "coming soon"
             }
         ],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "EPCckr Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s3.png"
@@ -120,7 +120,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/energy-demand-visualisation-service"
             }
         ],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "EPCedv Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s4.png"
@@ -169,7 +169,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/climate-change-radiation-forecasting-service"
             }
         ],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "CCRF Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s5.png"
@@ -208,7 +208,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/twin4der-api-gateway-api-service-power-system-simulations"
             }
         ],
-        "category": "I-NET, I-DER",
+        "category": "ΑΙ for Energy Networks (I-NET), AI for Distributed Energy Resources (I-DER)",
         "image": {
             "name": "Twin4DER Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s6.png"
@@ -248,7 +248,7 @@ export const serviceList = [
     //             "link": "https://www.ai4europe.eu/research/ai-catalog/finding-faults-3-phase-electrical-lines-using-lossless-reconstruction"
     //         }
     //     ],
-    //     "category": "I-NET, I-DER",
+    //     "category": "ΑΙ for Energy Networks (I-NET), AI for Distributed Energy Resources (I-DER)",
     //     "image": {
     //         "name": "Service C Image",
     //         "source": process.env.PUBLIC_URL + "https://via.placeholder.com/400x300"
@@ -273,7 +273,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-project-circuit-breaker-asset-management"
             }
         ],
-        "category": "I-NET",
+        "category": "ΑΙ for Energy Networks (I-NET)",
         "image": {
             "name": "CB Asset Management Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s7.png"
@@ -306,7 +306,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/ipmvp-service"
             }
         ],
-        "category": "I-DER",
+        "category": "AI for Distributed Energy Resources (I-DER)",
         "image": {
             "name": "IPMVP Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s8.png"
@@ -349,7 +349,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/flexdr"
             }
         ],
-        "category": "I-DER",
+        "category": "AI for Distributed Energy Resources (I-DER)",
         "image": {
             "name": "FlexDR Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s9.png"
@@ -399,7 +399,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/deeptsf"
             }
         ],
-        "category": "I-NET, I-DER, I-ENEF",
+        "category": "ΑΙ for Energy Networks (I-NET), AI for Distributed Energy Resources (I-DER), AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "DeepTSF Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s10.png"
@@ -439,7 +439,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-project-net-load-forecasting-tso-dso-interface"
             }
         ],
-        "category": "I-NET",
+        "category": "ΑΙ for Energy Networks (I-NET)",
         "image": {
             "name": "Net Load Forecasting Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s11.png"
@@ -468,7 +468,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-heat-forecasting"
             }
         ],
-        "category": "I-NET",
+        "category": "ΑΙ for Energy Networks (I-NET)",
         "image": {
             "name": "HRSForecast Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s12.png"
@@ -503,7 +503,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-heat-decision"
             }
         ],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "HRSOptim Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s13.png"
@@ -534,7 +534,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/knowage-open-source-suite-analytics-and-business-intelligence"
             }
         ],
-        "category": "General",
+        "category": "General Analytic Tools",
         "image": {
             "name": "Virtual Workbench Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s14.jpg"
@@ -571,7 +571,7 @@ export const serviceList = [
         "service_links": [],
         "github_links": [],
         "aiod_links": [],
-        "category": "I-DER",
+        "category": "AI for Distributed Energy Resources (I-DER)",
         "image": {
             "name": "COMSrecast Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s15.png"
@@ -590,7 +590,7 @@ export const serviceList = [
         "service_links": [],
         "github_links": [],
         "aiod_links": [],
-        "category": "I-DER",
+        "category": "AI for Distributed Energy Resources (I-DER)",
         "image": {
             "name": "COMSrecast Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s16.png"
@@ -616,7 +616,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/eei-service-deployment"
             }
         ],
-        "category": "I-ENEF",
+        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
         "image": {
             "name": "EEI-DSS Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s17.png"
@@ -649,7 +649,7 @@ export const serviceList = [
         "service_links": [],
         "github_links": [],
         "aiod_links": [],
-        "category": "Technical Enablers",
+        "category": "Tools for ML Pipeline",
         "image": {
             "name": "Model evaluation & serving framework Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s18.png"
@@ -675,7 +675,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-transfer-learning-wizard"
             }
         ],
-        "category": "Technical Enablers",
+        "category": "Tools for ML Pipeline",
         "image": {
             "name": "TLWizard Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s19.png"
@@ -697,7 +697,7 @@ export const serviceList = [
             {"name": "Secure", "link": "https://github.com/I-NERGY/mlflow-tracking-server-nginx"},
         ],
         "aiod_links": [],
-        "category": "Technical Enablers",
+        "category": "Tools for ML Pipeline",
         "image": {"name": "MLFlow image", "source": process.env.PUBLIC_URL + "/images/services/mlflow.png"}
     }
 ]

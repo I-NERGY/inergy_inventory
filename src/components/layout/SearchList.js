@@ -30,10 +30,10 @@ const SearchField = () => {
 
     const renderGroup = (params) => [
         <div key={params.key} style={{ color: 'orange', padding: '8px 16px' }}>
-            <span style={{ fontWeight: 'bold', fontSize: '18px' }} className="headingGradient">{params.group}</span>
+            <span style={{ fontWeight: 'bold', fontSize: '16px' }} className="headingGradient">{params.group}</span>
         </div>,
         ...params.children.map((option) => (
-            <div key={option.id} style={{ paddingLeft: '16px', paddingRight: '16px' }}>
+            <div key={option.id} style={{ paddingLeft: '14px', paddingRight: '16px' }}>
                 {option}
             </div>
         ))
