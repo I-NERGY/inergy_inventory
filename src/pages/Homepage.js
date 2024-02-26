@@ -73,7 +73,7 @@ function Homepage() {
     const categoryOrder = [
         'ΑΙ for Energy Networks (I-NET)',
         'AI for Distributed Energy Resources (I-DER)',
-        'AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)',
+        'AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)',
         'General Analytic Tools',
         'Tools for ML Pipeline'
     ];
@@ -113,7 +113,7 @@ function Homepage() {
                 </Box>
             </Box>
 
-            <Container maxWidth={!isLargeScreen ? 'xl' : 'lg'} sx={{my: 5}}>
+            <Container maxWidth={!isLargeScreen ? 'lg' : 'xl'} sx={{my: 5}}>
                 {categoryOrder.map((category) => (
                     <Accordion
                         key={category}

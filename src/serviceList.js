@@ -50,7 +50,7 @@ export const serviceList = [
             "name": "AI Asset",
             "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-electrical-digital-twins-tool-docker-container-format"
         }],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "DT Service Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s2.png"
@@ -82,7 +82,7 @@ export const serviceList = [
                 "link": "coming soon"
             }
         ],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "EPCckr Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s3.png"
@@ -120,7 +120,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/energy-demand-visualisation-service"
             }
         ],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "EPCedv Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s4.png"
@@ -169,7 +169,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/climate-change-radiation-forecasting-service"
             }
         ],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "CCRF Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s5.png"
@@ -399,7 +399,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/deeptsf"
             }
         ],
-        "category": "ΑΙ for Energy Networks (I-NET), AI for Distributed Energy Resources (I-DER), AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "ΑΙ for Energy Networks (I-NET), AI for Distributed Energy Resources (I-DER), AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "DeepTSF Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s10.png"
@@ -503,7 +503,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/i-nergy-heat-decision"
             }
         ],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "HRSOptim Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s13.png"
@@ -616,7 +616,7 @@ export const serviceList = [
                 "link": "https://www.ai4europe.eu/research/ai-catalog/eei-service-deployment"
             }
         ],
-        "category": "AI - Other Energy Efficiency and Non-energy Domains (I-ENEF)",
+        "category": "AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)",
         "image": {
             "name": "EEI-DSS Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s17.png"
