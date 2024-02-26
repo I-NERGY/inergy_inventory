@@ -7,6 +7,7 @@ import {Link, useLocation} from 'react-router-dom';
 import {useKeycloak} from '@react-keycloak/web';
 
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
@@ -94,47 +95,61 @@ export default function Layout({children}) {
                 <CssBaseline/>
                 <AppBar position="fixed" open={open}>
                     <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={handleDrawerOpen}
-                            edge="start"
-                            sx={{ mr: 2, color: 'white', ...(open && { display: 'none' }) }}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Stack direction={'row'}>
-                            <Link to="/">
-                                <img
-                                    src={`/images/i-nergy_logo_trans_back.png`}
-                                    alt="I-NERGY logo"
-                                    height={'60px'}
-                                    style={{ objectFit: 'cover', marginRight: '10px' }}
-                                />
-                            </Link>
-                            <Link to="/">
-                                <img
-                                    src={`/images/aiod.svg`}
-                                    alt="AIoD logo"
-                                    height={'60px'}
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </Link>
-                        </Stack>
+                        <Grid container>
+                            <Grid item xs={3} sx={{
+                                display: {xs: "none", lg: "block"}
+                            }}>
+                                <Stack direction={'row'}>
+                                    <IconButton
+                                        color="inherit"
+                                        aria-label="open drawer"
+                                        onClick={handleDrawerOpen}
+                                        edge="start"
+                                        sx={{mr: 2, color: 'white', ...(open && {display: 'none'})}}
+                                    >
+                                        <MenuIcon/>
+                                    </IconButton>
+                                    <Link to="/">
+                                        <img
+                                            src={`/images/i-nergy_logo_trans_back.png`}
+                                            alt="I-NERGY logo"
+                                            height={'60px'}
+                                            style={{objectFit: 'cover', marginRight: '10px'}}
+                                        />
+                                    </Link>
+                                    <Link to="/">
+                                        <img
+                                            src={`/images/aiod.svg`}
+                                            alt="AIoD logo"
+                                            height={'60px'}
+                                            style={{objectFit: 'cover'}}
+                                        />
+                                    </Link>
+                                </Stack>
+                            </Grid>
 
-                        {keycloak.authenticated === true && (
-                            <>
-                                <Box sx={{ textAlign: 'center', width: '50%', marginX: 'auto', px: 3 }}> {/* Center the SearchList */}
-                                    <SearchList />
-                                </Box>
-                                <Typography sx={{ ml: 'auto' }} style={{ color: 'white' }}>
-                                    Welcome, {keycloak?.tokenParsed?.preferred_username}
-                                </Typography>
-                                <MenuButton subLinks={appbarMenuButtonItems} signout={handleSignOut} />
-                            </>
-                        )}
+                            {keycloak.authenticated === true && (
+                                <Grid item xs={12} sm={3} display={'flex'} alignItems={'center'} order={{xs: 1, sm: 3}}>
+                                    <Typography style={{color: 'white', marginLeft: 'auto'}}>
+                                        Welcome, {keycloak?.tokenParsed?.preferred_username}
+                                    </Typography>
+                                    <MenuButton subLinks={appbarMenuButtonItems} signout={handleSignOut}/>
+                                </Grid>
+                            )}
+
+                            {keycloak.authenticated === true && (
+                                <Grid item xs={12} sm={6} order={{xs: 2, sm: 2}}>
+                                    <Box sx={{textAlign: 'center', width: '80%', marginX: 'auto'}}>
+                                        <SearchList/>
+                                    </Box>
+                                </Grid>
+                            )}
+                        </Grid>
+
                     </Toolbar>
                 </AppBar>
+
+
                 <Drawer
                     sx={{
                         width: drawerWidth,
