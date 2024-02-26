@@ -24,7 +24,7 @@ export const serviceList = [
             "name": "Visual Analytics Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s1.png"
         },
-        "demoVideo": "",
+        "demoVideo": "https://www.youtube.com/watch?v=4SKkJIpWTqM",
         "screenshots": [
             {"name": "Charging Capacity", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Charging Capacity.png"},
             {"name": "Consumption Graph", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s1/Consumption Graph.png"},
@@ -55,7 +55,7 @@ export const serviceList = [
             "name": "DT Service Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s2.png"
         },
-        "demoVideo": "",
+        "demoVideo": "https://www.youtube.com/watch?v=GbFS3POGKlk",
         "screenshots": [
             {"name": "Add Meter", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/add_meter_dt.png"},
             {"name": "Asset Page summary", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s2/asset_page_Summary.png"},
@@ -213,7 +213,7 @@ export const serviceList = [
             "name": "Twin4DER Image",
             "source": process.env.PUBLIC_URL + "/images/services/service_s6.png"
         },
-        "demoVideo": "",
+        "demoVideo": "https://www.youtube.com/watch?v=gj-vfB44vxU",
         "screenshots": [
             {"name": "Twin4DER - Circuit from the pilot partner", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Circuit from the pilot partner.png"},
             {"name": "Twin4DER - Circuit graphic in DPsim", "source": process.env.PUBLIC_URL + "/images/screenshots/service_s6/Twin4DER - Circuit graphic in DPsim.png"},
