@@ -3,17 +3,6 @@ import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 
 import { serviceList } from "../../serviceList";
-
-const options = serviceList.map((option) => {
-    const category = option.category;
-    const keywords = option.keywords;
-    return {
-        category,
-        keywords,
-        ...option,
-    };
-});
-
 const SearchField = () => {
     const [value, setValue] = useState(null)
 
@@ -39,12 +28,37 @@ const SearchField = () => {
         ))
     ];
 
+    const categoryOrder = [
+        'ΑΙ for Energy Networks (I-NET)',
+        'AI for Distributed Energy Resources (I-DER)',
+        'AI - Other Energy Efficiency & Non-Energy Domains (I-ENEF)',
+        'General Analytic Tools',
+        'Tools for ML Pipeline'
+    ];
+
+    const options = serviceList.flatMap((option) => {
+        const categories = option.category.split(',').map(category => category.trim());
+        return categories.map((category) => ({
+            ...option,
+            category, // Update the category to each individual category
+        }));
+    });
+
+    const sortedOptions = options.sort((a, b) => {
+        const indexA = categoryOrder.indexOf(a.category);
+        const indexB = categoryOrder.indexOf(b.category);
+        return indexA - indexB;
+    });
+
+
+
+
 
     return (
         <Autocomplete
             className={'searchBox'}
             id="grouped-demo"
-            options={options.sort((a, b) => -b.category.localeCompare(a.category))}
+            options={sortedOptions}
             groupBy={(option) => option.category}
             getOptionLabel={(option) => option.title}
             value={value}
@@ -52,7 +66,7 @@ const SearchField = () => {
             onChange={(event, newValue) => {
                 setValue(newValue);
             }}
-            renderGroup={renderGroup} // Apply custom rendering for group labels
+            renderGroup={renderGroup}
             sx={{
                 input: {
                     color: 'white',

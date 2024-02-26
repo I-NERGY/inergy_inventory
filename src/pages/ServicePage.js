@@ -21,7 +21,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import InfoIcon from '@mui/icons-material/Info';
 
 import Breadcrumb from "../components/layout/Breadcrumb";
